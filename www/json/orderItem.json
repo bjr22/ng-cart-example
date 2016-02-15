@@ -1,0 +1,44 @@
+[
+  {
+    id: "orderItem1",
+    orderId: "order1",
+    itemId: "item1",
+    quantity: 1
+  },
+  {
+    id: "orderItem2",
+    orderId: "order1",
+    itemId: "item3",
+    quantity: 1
+  },
+  {
+    id: "orderItem3",
+    orderId: "order2",
+    itemId: "item2",
+    quantity: 1
+  },
+  {
+    id: "orderItem4",
+    orderId: "order2",
+    itemId: "item4",
+    quantity: 1
+  },
+  {
+    id: "orderItem5",
+    orderId: "order3",
+    itemId: "item3",
+    quantity: 1
+  },
+  {
+    id: "orderItem6",
+    orderId: "order3",
+    itemId: "item4",
+    quantity: 1
+  },
+  {
+    id: "orderItem7",
+    orderId: "order3",
+    itemId: "item5",
+    quantity: 1
+  }
+]

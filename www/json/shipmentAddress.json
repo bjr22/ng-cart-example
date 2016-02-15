@@ -1,0 +1,23 @@
+[
+  {
+    id: "address1",
+    address: "Paseo Independencia, 12",
+    postalCode: "50001",
+    city: "Zaragoza",
+    country: "España"
+  },
+  {
+    id: "address2",
+    address: "Calle Andrés Casado, 23",
+    postalCode: "41100",
+    city: "Coria del Río",
+    country: "España"
+  },
+  {
+    id: "address3",
+    address: "Crta. Cádiz-Málaga, 38",
+    postalCode: "12179",
+    city: "Tírig",
+    country: "España"
+  }
+]

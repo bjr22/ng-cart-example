@@ -1,0 +1,20 @@
+[
+  {
+    id: "order1",
+    userId: "user1",
+    state: "Shipped",
+    date: "08/02/2016"
+  },
+  {
+    id: "order2",
+    userId: "user2",
+    state: "Delivered",
+    date: "01/02/2016"
+  },
+  {
+    id: "order3",
+    userId: "user3",
+    state: "Canceled",
+    date: "20/01/2016"
+  },
+]
