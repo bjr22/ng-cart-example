@@ -1,56 +1,56 @@
 [
   {
-    itemId: 'item1',
-    name: 'Siberian Husky',
-    description: 'A beautiful dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam risus nunc, eleifend a ante in, elementum posuere mauris. Nulla non malesuada augue. Sed in purus magna. Ut et est mattis, consectetur elit a, sodales velit. Phasellus purus sem, sollicitudin eget malesuada a, eleifend in justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean et erat odio.',
-    price: 287.99,
-    averageRate: 4.8,
-    section: 'Animal',
-    category: 'Mammal'
+    "itemId": 'item1',
+    "name": 'Siberian Husky',
+    "description": 'A beautiful dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam risus nunc, eleifend a ante in, elementum posuere mauris. Nulla non malesuada augue. Sed in purus magna. Ut et est mattis, consectetur elit a, sodales velit. Phasellus purus sem, sollicitudin eget malesuada a, eleifend in justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean et erat odio.',
+    "price": 287.99,
+    "averageRate": 4.8,
+    "section": 'Animal',
+    "category": 'Mammal'
   },
   {
-    itemId: 'item2',
-    name: 'Standard canary',
-    description: 'A beautiful cat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper sapien metus, quis blandit leo sodales in. Praesent eu ex vitae est ornare rhoncus sed a elit. Donec eget accumsan dolor. Ut placerat id ipsum eget consectetur. Donec ut neque at arcu ornare consequat vitae a tellus. Curabitur imperdiet eros nec ornare cursus. Sed eu dignissim enim. Donec gravida quam cursus ante luctus, in hendrerit nunc tempus. Vivamus a viverra urna, ac rutrum nisl. Phasellus in mi ante. Aliquam mollis facilisis nulla, eget laoreet quam accumsan eget.',
-    price: 253.99,
-    averageRate: 3.9,
-    section: 'Animal',
-    category: 'Bird'
+    "itemId": 'item2',
+    "name": 'Standard canary',
+    "description": 'A beautiful cat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper sapien metus, quis blandit leo sodales in. Praesent eu ex vitae est ornare rhoncus sed a elit. Donec eget accumsan dolor. Ut placerat id ipsum eget consectetur. Donec ut neque at arcu ornare consequat vitae a tellus. Curabitur imperdiet eros nec ornare cursus. Sed eu dignissim enim. Donec gravida quam cursus ante luctus, in hendrerit nunc tempus. Vivamus a viverra urna, ac rutrum nisl. Phasellus in mi ante. Aliquam mollis facilisis nulla, eget laoreet quam accumsan eget.',
+    "price": 253.99,
+    "averageRate": 3.9,
+    "section": 'Animal',
+    "category": 'Bird'
   },
   {
-    itemId: 'item3',
-    name: 'Dog Food',
-    description: 'Best diet for your best friend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus lorem ipsum, id placerat lectus gravida a. Sed ultricies, libero eget commodo aliquam, lorem nunc faucibus lacus, nec ornare erat ex ac neque. Proin placerat mauris ut ligula tempus, at pharetra turpis ultricies. Vestibulum vestibulum sem quis sem facilisis, ut imperdiet est lobortis. Integer facilisis id lorem id venenatis. Quisque non commodo neque, non lobortis velit. Sed eros neque, fringilla ut vestibulum sed, venenatis ut dui.',
-    price: 50.50,
-    averageRate: 4.6,
-    section: 'Food',
-    category: 'Mammal'
+    "itemId": 'item3',
+    "name": 'Dog Food',
+    "description": 'Best diet for your best friend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus lorem ipsum, id placerat lectus gravida a. Sed ultricies, libero eget commodo aliquam, lorem nunc faucibus lacus, nec ornare erat ex ac neque. Proin placerat mauris ut ligula tempus, at pharetra turpis ultricies. Vestibulum vestibulum sem quis sem facilisis, ut imperdiet est lobortis. Integer facilisis id lorem id venenatis. Quisque non commodo neque, non lobortis velit. Sed eros neque, fringilla ut vestibulum sed, venenatis ut dui.',
+    "price": 50.50,
+    "averageRate": 4.6,
+    "section": 'Food',
+    "category": 'Mammal'
   },
   {
-    itemId: 'item4',
-    name: 'Bird Food',
-    description: 'Best seeds for your pet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus lorem ipsum, id placerat lectus gravida a. Sed ultricies, libero eget commodo aliquam, lorem nunc faucibus lacus, nec ornare erat ex ac neque. Proin placerat mauris ut ligula tempus, at pharetra turpis ultricies. Vestibulum vestibulum sem quis sem facilisis, ut imperdiet est lobortis. Integer facilisis id lorem id venenatis. Quisque non commodo neque, non lobortis velit. Sed eros neque, fringilla ut vestibulum sed, venenatis ut dui.',
-    price: 45.70,
-    averageRate: 4.7,
-    section: 'Food',
-    category: 'Bird'
+    "itemId": 'item4',
+    "name": 'Bird Food',
+    "description": 'Best seeds for your pet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus lorem ipsum, id placerat lectus gravida a. Sed ultricies, libero eget commodo aliquam, lorem nunc faucibus lacus, nec ornare erat ex ac neque. Proin placerat mauris ut ligula tempus, at pharetra turpis ultricies. Vestibulum vestibulum sem quis sem facilisis, ut imperdiet est lobortis. Integer facilisis id lorem id venenatis. Quisque non commodo neque, non lobortis velit. Sed eros neque, fringilla ut vestibulum sed, venenatis ut dui.',
+    "price": 45.70,
+    "averageRate": 4.7,
+    "section": 'Food',
+    "category": 'Bird'
   },
   {
-    itemId: 'item5',
-    name: 'Dog Collar',
-    description: 'Don\'t let your best friend escape. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam sed nisl maximus elementum. Sed eu vulputate ipsum, nec mattis diam. Morbi ac nisi nec massa gravida eleifend a vitae nunc. Suspendisse a maximus nulla, varius porta dolor. Sed consequat nunc vitae scelerisque imperdiet. Aenean lobortis, ex ut semper vulputate, enim leo dictum justo, vel porta velit sem id sapien. Vivamus ac justo dapibus, ornare leo sed, feugiat tellus.',
-    price: 19.99,
-    averageRate: 3.2,
-    section: 'Accessory',
-    category: 'Mammal'
+    "itemId": 'item5',
+    "name": 'Dog Collar',
+    "description": 'Don\'t let your best friend escape. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam sed nisl maximus elementum. Sed eu vulputate ipsum, nec mattis diam. Morbi ac nisi nec massa gravida eleifend a vitae nunc. Suspendisse a maximus nulla, varius porta dolor. Sed consequat nunc vitae scelerisque imperdiet. Aenean lobortis, ex ut semper vulputate, enim leo dictum justo, vel porta velit sem id sapien. Vivamus ac justo dapibus, ornare leo sed, feugiat tellus.',
+    "price": 19.99,
+    "averageRate": 3.2,
+    "section": 'Accessory',
+    "category": 'Mammal'
   },
   {
-    itemId: 'item6',
-    name: 'Bird cage',
-    description: 'Play with it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam sed nisl maximus elementum. Sed eu vulputate ipsum, nec mattis diam. Morbi ac nisi nec massa gravida eleifend a vitae nunc. Suspendisse a maximus nulla, varius porta dolor. Sed consequat nunc vitae scelerisque imperdiet. Aenean lobortis, ex ut semper vulputate, enim leo dictum justo, vel porta velit sem id sapien. Vivamus ac justo dapibus, ornare leo sed, feugiat tellus.',
-    price: 29.99,
-    averageRate: 3.1,
-    section: 'Accessory',
-    category: 'Bird'
+    "itemId": 'item6',
+    "name": 'Bird cage',
+    "description": 'Play with it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in diam sed nisl maximus elementum. Sed eu vulputate ipsum, nec mattis diam. Morbi ac nisi nec massa gravida eleifend a vitae nunc. Suspendisse a maximus nulla, varius porta dolor. Sed consequat nunc vitae scelerisque imperdiet. Aenean lobortis, ex ut semper vulputate, enim leo dictum justo, vel porta velit sem id sapien. Vivamus ac justo dapibus, ornare leo sed, feugiat tellus.',
+    "price": 29.99,
+    "averageRate": 3.1,
+    "section": 'Accessory',
+    "category": 'Bird'
   }
 ]

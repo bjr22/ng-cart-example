@@ -1,26 +1,26 @@
 [
   {
-    id: "category1",
-    category: "Reptil"
+    "id": "category1",
+    "category": "Reptil"
   },
   {
-    id: "category2",
-    category: "Amphibious"
+    "id": "category2",
+    "category": "Amphibious"
   },
   {
-    id: "category3",
-    category: "Mammal"
+    "id": "category3",
+    "category": "Mammal"
   },
   {
-    id: "category4",
-    category: "Fish"
+    "id": "category4",
+    "category": "Fish"
   },
   {
-    id: "category5",
-    category: "Bird"
+    "id": "category5",
+    "category": "Bird"
   },
   {
-    id: "category6",
-    category: "Insect"
+    "id": "category6",
+    "category": "Insect"
   }
 ]

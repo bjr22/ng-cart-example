@@ -1,30 +1,30 @@
 [
   {
-    id: "opinion1",
-    itemId: "item1",
-    orderId: "order1",
-    rate: 4,
-    opinion: "I love this dog! So cute! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget orci ac enim laoreet mollis vitae nec erat. Proin nulla tellus, feugiat convallis scelerisque eget, ultricies at purus. Quisque nunc risus, viverra vel laoreet in, blandit vitae est. Suspendisse ut enim varius, ultrices felis eget, tincidunt eros."
+    "id": "opinion1",
+    "itemId": "item1",
+    "orderId": "order1",
+    "rate": 4,
+    "opinion": "I love this dog! So cute! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget orci ac enim laoreet mollis vitae nec erat. Proin nulla tellus, feugiat convallis scelerisque eget, ultricies at purus. Quisque nunc risus, viverra vel laoreet in, blandit vitae est. Suspendisse ut enim varius, ultrices felis eget, tincidunt eros."
   },
   {
-    id: "opinion2",
-    itemId: "item2",
-    orderId: "order2",
-    rate: 5,
-    opinion: ""
+    "id": "opinion2",
+    "itemId": "item2",
+    "orderId": "order2",
+    "rate": 5,
+    "opinion": ""
   },
   {
-    id: "opinion3",
-    itemId: "item3",
-    orderId: "order2",
-    rate: 3,
-    opinion: "Healthy food for my puppy. Donec pharetra vestibulum risus, in porttitor ligula luctus sed. Praesent vitae lacinia elit, ut pulvinar mi."
+    "id": "opinion3",
+    "itemId": "item3",
+    "orderId": "order2",
+    "rate": 3,
+    "opinion": "Healthy food for my puppy. Donec pharetra vestibulum risus, in porttitor ligula luctus sed. Praesent vitae lacinia elit, ut pulvinar mi."
   },
   {
-    id: "opinion4",
-    itemId: "item5",
-    orderId: "order3",
-    rate: 1,
-    opinion: "Worst collar ever. It hurts my dog.Nam placerat felis et luctus rhoncus. Donec consectetur finibus gravida."
+    "id": "opinion4",
+    "itemId": "item5",
+    "orderId": "order3",
+    "rate": 1,
+    "opinion": "Worst collar ever. It hurts my dog.Nam placerat felis et luctus rhoncus. Donec consectetur finibus gravida."
   },
 ]

@@ -1,14 +1,14 @@
 [
   {
-    id: "section1",
-    section: "Animal"
+    "id": "section1",
+    "section": "Animal"
   },
   {
-    id: "section2",
-    section: "Food"
+    "id": "section2",
+    "section": "Food"
   },
   {
-    id: "section3",
-    section: "Accessory"
+    "id": "section3",
+    "section": "Accessory"
   }
 ]
