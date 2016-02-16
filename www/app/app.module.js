@@ -3,6 +3,7 @@
   angular.module('ngCartExample', 
   [
     'ionic',
-    'ngCart'
+    'ngCart',
+    'ngCartExample.cartItem'
   ]);
 })();

@@ -1,0 +1,14 @@
+<div class="row">
+  <h3>{{cartItem.item.name}}</h3>
+</div>
+<div class="row">
+  <div class="col-50">
+    <img class="responsiveItemImg" ng-src="{{cartItem.item.picto}}" />
+  </div>
+  <div class="col-50">
+    <ngcart-addtocart id="{{cartItem.item.id}}" name="{{cartItem.item.name}}" price="{{cartItem.item.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+  </div>
+</div>
+<div class="row">
+    <p>{{cartItem.item.description}}</p>
+</div>

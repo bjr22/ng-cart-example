@@ -6,9 +6,10 @@
       ngCart.setTaxRate(7.5);
       ngCart.setShipping(2.99);
     
-      var vm = $scope;
-      MockedData.getUsers().then(function (response) {
-        console.log("users", response);
+      var vm = this;
+      vm.items = []
+      MockedData.getItems().then(function (response) {
+        vm.items = response;
       });
   });
 })();

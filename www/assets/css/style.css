@@ -16,3 +16,16 @@ h3 span {
 span[ng-click] {
   cursor: pointer;
 }
+
+.responsiveItemImg {
+  max-width:150px;
+}
+
+p {
+  text-align: justify;
+}
+
+.row.unlimited-items {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}

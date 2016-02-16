@@ -6,7 +6,7 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -25,6 +25,10 @@
     
     <!-- MOCK DATA FACTORY -->
     <script src="app/config/app.mocked.data.js"></script>
+    
+    <!-- MODULES -->
+    <script src="app/modules/cartItem/cartItem.component.js"></script>
+    
     <!--script src="lib/angular/angular.js"></script-->
     
     <script src="lib/ngCart/dist/ngCart.js"></script>
@@ -43,7 +47,7 @@
         <h1 class="title">ng-cart example</h1>
       </ion-header-bar>
       <ion-content>
-        <div ng-controller="AppCtrl">
+        <div ng-controller="AppCtrl as vm">
 
           <div class="row">
             <div class="col-xs-offset-8 col-xs-4">
@@ -57,30 +61,9 @@
           
           <h3>Add to Cart <span>(ngcart-addtocart)</span></h3>
           
-          <div class="row responsive-sm">
-            <div class="card">
-              <div class="item item-text-wrap">
-                <h4>My Item #1</h4>
-                <ngcart-addtocart id="item1" name="My Item #1" price="10.99" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
-              </div>
-            </div>
-            <div class="card">
-              <div class="item item-text-wrap">
-                <h4>My Item #2</h4>
-                <ngcart-addtocart id="item2" name="My Item #2" price="15.29" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>  
-              </div>
-            </div>
-            <div class="card">
-              <div class="item item-text-wrap">
-                <h4>My Item #3</h4>
-                <ngcart-addtocart id="item3" name="My Item #3" price="25.75" quantity="3" quantity-max="10">Add to Cart</ngcart-addtocart>
-              </div>
-            </div>
-            <div class="card">
-              <div class="item item-text-wrap">
-                <h4>My Item #4</h4>
-                <ngcart-addtocart id="item4" name="My Item #4" price="29.25" quantity="1" quantity-max="10">Add to Cart</ngcart-addtocart>        
-              </div>
+          <div class="row unlimited-items responsive-md">
+            <div class="col-33" ng-repeat="item in vm.items track by item.id">
+              <cart-item item="item"></cart-item>
             </div>
           </div>
           
