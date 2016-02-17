@@ -7,41 +7,13 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="app/app.module.js"></script>
-    <script src="app/app.controller.js"></script>
-    <script src="app/config/app.config.js"></script>
-    
-    <!-- MOCK DATA FACTORY -->
-    <script src="app/config/app.mocked.data.js"></script>
-    
-    <!-- MODULES -->
-    <script src="app/modules/cartItem/cartItem.component.js"></script>
-    
-    <!--script src="lib/angular/angular.js"></script-->
-    
-    <script src="lib/ngCart/dist/ngCart.js"></script>
-    
-    <!-- Latest compiled and minified CSS -->
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script-->
     
   </head>
   <body ng-app="ngCartExample">
 
+    <ion-nav-view ng-controller="AppCtrl as vm"></ion-nav-view>
+    <!--
+    
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">ng-cart example</h1>
@@ -107,7 +79,9 @@
 
           <!--  TEMPALATES -->
           <!--  TEMPALATES -->
-          <!--  TEMPALATES -->
+          <!--  TEMPALATES THIS HAS TO BE CLOSED
+
+          
 
           <script type="text/ng-template" id="template/ngCart/summary.html">
             <div class="row">
@@ -242,5 +216,37 @@
 
       </ion-content>
     </ion-pane>
+  -->
+    
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="app/config/app.config.js"></script>
+    
+    <!-- MOCK DATA FACTORY -->
+    <script src="app/config/app.mocked.data.js"></script>
+    
+    <!-- MODULES -->
+    <script src="app/modules/cartItem/cartItem.component.js"></script>
+    
+    <!--script src="lib/angular/angular.js"></script-->
+    
+    <script src="lib/ngCart/dist/ngCart.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script-->
   </body>
 </html>

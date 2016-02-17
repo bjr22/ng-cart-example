@@ -1,0 +1,19 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <!-- Main content -->
+  <ion-side-menu-content drag-content="false">
+    <!-- Navigation bar -->
+    <ion-nav-bar class="bar-positive">
+      <!-- Back button, for nested screens -->
+      <ion-nav-back-button class="no-text" ></ion-nav-back-button>
+
+      <ion-nav-buttons side="right">
+        <i class="icon ion-andorid-cart"></i>
+        <!-- Button that toggles menu -->
+        <ngcart-summary></ngcart-summary>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- Content -->
+    <ion-nav-view name="content"></ion-nav-view>
+  </ion-side-menu-content>
+</ion-side-menus>
