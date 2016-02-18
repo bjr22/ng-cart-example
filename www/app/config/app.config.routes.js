@@ -23,9 +23,12 @@
         url: '/',
         views : {
           'content@app': {
-            template: '<ion-view ng-cloak can-swipe-back="false" view-title="Feedback"><ion-content has-bouncing="false"  >'+
-              '' +
-              '</ion-content></ion-view>'
+            template: 
+              '<ion-view ng-cloak can-swipe-back="false" view-title="NgCartExample">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<cart-item-list></cart-item-list>' +
+                '</ion-content>' + 
+              '</ion-view>'
           }
         }
       })

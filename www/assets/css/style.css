@@ -26,6 +26,6 @@ p {
 }
 
 .row.unlimited-items {
-  -webkit-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; /* for safari */
   flex-wrap: wrap;
 }

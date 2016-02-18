@@ -4,6 +4,7 @@
   [
     'ionic',
     'ngCart',
-    'ngCartExample.cartItem'
+    'ngCartExample.cartItem',
+    'ngCartExample.cartItemList'
   ]);
 })();

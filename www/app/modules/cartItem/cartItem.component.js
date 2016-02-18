@@ -19,11 +19,10 @@
     }
   };
   
-  cartItemController.$inject = ['$scope', '$q']
+  cartItemController.$inject = ['$scope', '$q'];
   function cartItemController($scope, $q) {
     var vm = this;
     vm.item = $scope.item;
-    console.log("da item", vm.item);
   };
   
 })();
