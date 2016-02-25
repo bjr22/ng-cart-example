@@ -1,5 +1,18 @@
 <div class="row">
-  <h3>{{cartItem.item.name}}</h3>
+  <div class="col">
+    <h3>{{cartItem.item.name}}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p><span class="section-category"><b>Section:</b></span> {{cartItem.item.section}}</p>
+  </div>
+  <div class="col">
+    <p><span class="section-category"><b>Category:</b></span> {{cartItem.item.category}}</p>
+  </div>
+</div>
+<div class="row">
+  <rating ng-model="rating.rate" max="rating.max"></rating>
 </div>
 <div class="row">
   <div class="col-50">

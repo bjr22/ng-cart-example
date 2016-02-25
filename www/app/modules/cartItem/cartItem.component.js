@@ -23,6 +23,10 @@
   function cartItemController($scope, $q) {
     var vm = this;
     vm.item = $scope.item;
+    $scope.rating = {
+      rate: vm.item.averageRate,
+      max: 5      
+    };
   };
   
 })();

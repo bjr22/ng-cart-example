@@ -5,6 +5,8 @@
     'ionic',
     'ngCart',
     'ngCartExample.cartItem',
-    'ngCartExample.cartItemList'
+    'ngCartExample.cartItemList',
+    'ngCartExample.cartSummary',
+    'ionic.rating'
   ]);
 })();

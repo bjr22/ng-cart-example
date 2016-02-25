@@ -29,3 +29,21 @@ p {
   -webkit-flex-wrap: wrap; /* for safari */
   flex-wrap: wrap;
 }
+
+.section-category {
+  font-size: 14px;
+  color:#1758AA;
+}
+
+.col {
+  margin-bottom: 0px;
+}
+
+/* glyphicons sizes */
+
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+
+/**/

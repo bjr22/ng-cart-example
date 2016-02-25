@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "ngCart": "ngcart#~1.0.0",
-    "Ionicons": "ionicons#~2.0.1"
+    "bootstrap": "~3.3.6",
+    "ionic-rating": "~0.2.0"
   }
 }
