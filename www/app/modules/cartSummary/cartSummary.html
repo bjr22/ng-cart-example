@@ -2,9 +2,44 @@
   Your cart is empty
 </div>
 
-<div class="table-responsive col-lg-12" ng-show="cartSummary.ngCart.getTotalItems() > 0">
-
-  <table class="table table-striped ngCart cart">
+<div class="col-lg-12" ng-show="cartSummary.ngCart.getTotalItems() > 0">
+  
+  <!-- HEADER ROW -->
+  <div class="row header">
+    <div class="col-25 padding-right"><b>Item</b></div>
+    <div class="col-25"><b>Quantity</b></div>
+    <div class="col-25"><b>Amount</b></div>
+    <div class="col-25"><b>Total</b></div>
+  </div>
+  <!-- ITEM ROWS -->
+  <div class="row padding-bottom" ng-repeat="item in cartSummary.ngCart.getCart().items track by $index" ng-class="{'oddRow': $index % 2 === 1, 'evenRow': $index % 2 === 0}">
+    <div class="col-25 padding-right">{{item.getName()}}</div>
+    <div class="col-25">
+      <span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}" ng-click="item.setQuantity(-1, true)"></span>&nbsp;&nbsp;
+      {{ item.getQuantity() | number }}&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span>
+    </div>
+    <div class="col-25">{{ item.getPrice() | currency}}</div>
+    <div class="col-25">{{ item.getTotal() | currency}}</div>
+  </div>
+  <!-- TAX ROW -->
+  <div class="row" ng-show="cartSummary.ngCart.getTax()">
+    <div class="col-25 col-offset-50"><b>Tax ({{ cartSummary.ngCart.getTaxRate() }}%):</b></div>
+    <div class="col-25">{{ cartSummary.ngCart.getTax() | currency }}</div>
+  </div>
+  <!-- SHIPPING ROW -->
+  <div class="row" ng-show="cartSummary.ngCart.getShipping()">
+    <div class="col-25 col-offset-50"><b>Shipping:</b></div>
+    <div class="col-25">{{ cartSummary.ngCart.getShipping() | currency }}</div>
+  </div>
+  <!-- TOTAL ROW -->
+  <div class="row">
+    <div class="col-25 col-offset-50"><b>Total:</b></div>
+    <div class="col-25">{{ cartSummary.ngCart.totalCost() | currency }}</div>
+  </div>
+  
+</div>
+  <!--table class="table table-striped ngCart cart">
     <thead>
       <tr>
         <th></th>
@@ -51,5 +86,4 @@
         <td>{{ item.getTotal() | currency }}</td>
       </tr>
     </tbody>
-    </table>
-</div>
+    </table-->

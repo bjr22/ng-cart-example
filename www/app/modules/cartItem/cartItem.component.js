@@ -10,7 +10,8 @@
       restrict: 'E',
       //replace: true,
       scope: {
-        item: '='
+        item: '=',
+        detailed: '='
       },
       bindToController: {},
       controller: cartItemController,
@@ -23,6 +24,7 @@
   function cartItemController($scope, $q) {
     var vm = this;
     vm.item = $scope.item;
+    vm.detailed = $scope.detailed;
     $scope.rating = {
       rate: vm.item.averageRate,
       max: 5      

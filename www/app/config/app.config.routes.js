@@ -32,7 +32,7 @@
           }
         }
       })
-      /*Cart Resume*/
+      /* CART RESUME */
       .state('app.cartResume', {
         url: '/cart-resume',
         views: {
@@ -46,20 +46,20 @@
           }
         }
       })
-      /* ITEM DETAILS 
-      .state('app.asdf', {
-        url: '/',
+      /* ITEM DETAILS */
+      .state('app.itemDetail', {
+        url: '/item',
         views : {
           'content@app': {
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="NgCartExample">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<cart-item-list></cart-item-list>' +
+                  '<cart-item></cart-item>' +
                 '</ion-content>' + 
               '</ion-view>'
           }
         }
-      })*/
+      })
     ;
   }
 })();

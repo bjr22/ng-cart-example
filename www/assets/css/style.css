@@ -39,6 +39,18 @@ p {
   margin-bottom: 0px;
 }
 
+.header .col-25 {
+  background-color:#BDB76B;
+}
+
+.evenRow {
+  background-color:#EEE8AA;
+}
+
+.oddRow {
+  background-color:#F0E68C;
+}
+
 /* glyphicons sizes */
 
 .gi-2x{font-size: 2em;}

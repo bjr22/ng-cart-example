@@ -7,11 +7,11 @@
       <ion-nav-back-button class="no-text" >
       </ion-nav-back-button>
       
+      
       <ion-nav-buttons side="right">
-        <button ng-if="!($state.is('app.cartResume'))" class="button button-stable" ui-sref="app.cartResume" >
+        <button ng-if="!$state.is('app.cartResume')" class="button button-stable" ui-sref="app.cartResume" >
           <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
           <!--ngcart-summary></ngcart-summary-->
-          <span>{{ngCart.getTotalItems()}}</span>
         </button>
         <!-- Button that toggles menu -->
         <!--span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span-->
@@ -20,6 +20,7 @@
 
     <!-- Content -->
     <ion-nav-view name="content">
+        <!--span>{{ngCart.getTotalItems()}}</span-->
     </ion-nav-view>
   </ion-side-menu-content>
 </ion-side-menus>

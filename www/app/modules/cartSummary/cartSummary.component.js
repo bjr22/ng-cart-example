@@ -15,10 +15,9 @@
     }
   }
   
-  cartSummaryController.$inject = ['$scope', 'ngCart'];
-  function cartSummaryController($scope, ngCart) {
+  cartSummaryController.$inject = ['$scope', 'ngCart', '$state'];
+  function cartSummaryController($scope, ngCart, $state) {
     var vm = this;
     vm.ngCart = ngCart;
-    console.log("Funciona!", vm.ngCart.getTotalItems());
   }
 })();
