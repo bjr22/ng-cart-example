@@ -4,7 +4,7 @@
     .module('ngCartExample')
     .factory('MockedData', MockedData);
   
-  MockedData.$inject = ['$http', '$q']
+  MockedData.$inject = ['$http', '$q'];
   function MockedData ($http, $q) {
     var getSomeData = function (source) {
       var deferred = $q.defer();

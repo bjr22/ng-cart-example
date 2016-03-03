@@ -52,21 +52,31 @@
         resolve: {
           items: ['MockedData', function (MockedData) {
             return MockedData.getItems();
+          }],
+          opinions: ['MockedData',function (MockedData) {
+            return MockedData.getOpinions();
           }]
         },
         views: {
           'content@app': {
-            controller: ['items', '$scope', '$stateParams', function (items, $scope, $stateParams) {
+            controller: ['$scope', '$stateParams', 'items', 'opinions', function ($scope, $stateParams, items, opinions) {
+              var _opinions = [];
               items.forEach(function (_item) {
                 if (_item.id === $stateParams.itemId) {
                   $scope.item = _item;
                 }
               });
+              opinions.forEach(function (_opinion) {
+                if (_opinion.itemId === $scope.item.id) {
+                  _opinions.push(_opinion);
+                }
+              });
+              $scope.opinions = _opinions;
             }], 
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Item details">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<on-sale-item item="item" detailed="true"></on-sale-item>' +
+                  '<item-details item="item" opinions="opinions"></item-details>' +
                 '</ion-content>' + 
               '</ion-view>'
           }

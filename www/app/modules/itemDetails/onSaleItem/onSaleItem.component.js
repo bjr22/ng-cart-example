@@ -15,8 +15,8 @@
       bindToController: {},
       controller: onSaleItemController,
       controllerAs: 'onSaleItem',
-      templateUrl: 'app/modules/onSaleItem/onSaleItem.html'
-    }
+      templateUrl: 'app/modules/itemDetails/onSaleItem/onSaleItem.html'
+    };
   };
   
   onSaleItemController.$inject = ['$scope', '$state'];
