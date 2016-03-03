@@ -4,9 +4,10 @@
   [
     'ionic',
     'ngCart',
-    'ngCartExample.cartItem',
-    'ngCartExample.cartItemList',
+    'ngCartExample.onSaleItem',
+    'ngCartExample.onSaleItemList',
     'ngCartExample.cartSummary',
+    'ngCartExample.opinionList',
     'ionic.rating'
   ]);
 })();

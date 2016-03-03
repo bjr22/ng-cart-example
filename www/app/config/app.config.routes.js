@@ -26,7 +26,7 @@
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Home">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<cart-item-list></cart-item-list>' +
+                  '<on-sale-item-list></on-sale-item-list>' +
                 '</ion-content>' + 
               '</ion-view>'
           }
@@ -48,13 +48,25 @@
       })
       /* ITEM DETAILS */
       .state('app.itemDetail', {
-        url: '/item',
-        views : {
+        url: '/item/:itemId',
+        resolve: {
+          items: ['MockedData', function (MockedData) {
+            return MockedData.getItems();
+          }]
+        },
+        views: {
           'content@app': {
+            controller: ['items', '$scope', '$stateParams', function (items, $scope, $stateParams) {
+              items.forEach(function (_item) {
+                if (_item.id === $stateParams.itemId) {
+                  $scope.item = _item;
+                }
+              });
+            }], 
             template: 
-              '<ion-view ng-cloak can-swipe-back="false" view-title="NgCartExample">' +
+              '<ion-view ng-cloak can-swipe-back="false" view-title="Item details">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<cart-item></cart-item>' +
+                  '<on-sale-item item="item" detailed="true"></on-sale-item>' +
                 '</ion-content>' + 
               '</ion-view>'
           }

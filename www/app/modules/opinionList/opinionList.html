@@ -1,0 +1,4 @@
+<div class="card" ng-repeat="opinion in opinionList.opinions track by $index">
+  <rating ng-model="opinion.averageRate" max="vm.maxRate"></rating>
+  <p>{{opinion.opinion}}</p>
+</div>

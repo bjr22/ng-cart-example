@@ -40,15 +40,15 @@ p {
 }
 
 .header .col-25 {
-  background-color:#BDB76B;
+  background-color:#D3D3D3;
 }
 
 .evenRow {
-  background-color:#EEE8AA;
+  background-color:#E6E6FA;
 }
 
 .oddRow {
-  background-color:#F0E68C;
+  background-color:#F0FFF0;
 }
 
 /* glyphicons sizes */
