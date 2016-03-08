@@ -19,7 +19,7 @@
     <img class="responsiveItemImg" ng-src="{{onSaleItem.item.picto}}" ng-click="onSaleItem.manageClickOnImage()"/>
   </div>
   <div class="col-50">
-    <ngcart-addtocart id="{{onSaleItem.item.id}}" name="{{onSaleItem.item.name}}" price="{{onSaleItem.item.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+    <ngcart-addtocart id="{{onSaleItem.item.id}}" name="{{onSaleItem.item.name}}" price="{{onSaleItem.item.price}}" quantity="1" quantity-max="5" data="onSaleItem.item">Add to Cart</ngcart-addtocart>
   </div>
 </div>
 <div class="row" ng-if="onSaleItem.detailed">

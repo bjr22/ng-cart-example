@@ -1,10 +1,4 @@
-<!-- WITHOUT ITEMS IN THE BASKET -->
-<div class="alert alert-warning" role="alert" ng-show="cartSummary.ngCart.getTotalItems() === 0">
-  <p>Your cart is empty</p>
-</div>
-
-<!-- WITH ITEMS IN THE BASKET -->
-<div class="col-lg-12" ng-show="cartSummary.ngCart.getTotalItems() > 0">
+<div class="col-lg-12">
   
   <!-- HEADER ROW -->
   <div class="row header">
@@ -42,5 +36,5 @@
     <div class="col-25 col-offset-50"><b>Total:</b></div>
     <div class="col-25">{{ cartSummary.ngCart.totalCost() | currency }}</div>
   </div>
-
+  
 </div>

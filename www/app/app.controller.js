@@ -7,5 +7,6 @@
       ngCart.setTaxRate(7.5);
       ngCart.setShipping(2.99);
       vm.$state = $state;
+      vm.ngCart = ngCart;
   });
 })();

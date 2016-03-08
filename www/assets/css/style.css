@@ -43,13 +43,29 @@ p {
   background-color:#D3D3D3;
 }
 
-.evenRow {
-  background-color:#E6E6FA;
-}
+/* SIDEBAR */
 
-.oddRow {
-  background-color:#F0FFF0;
-}
+  .title {
+    text-align: center;
+    font-size: 20px;
+    color:#1758AA;
+  }
+
+  .menu-header {
+    background-color: white;
+  }
+
+  
+
+/* STRIPED TABLE */
+
+  .evenRow {
+    background-color:#E6E6FA;
+  }
+
+  .oddRow {
+    background-color:#F0FFF0;
+  }
 
 /* glyphicons sizes */
 

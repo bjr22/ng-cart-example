@@ -15,6 +15,10 @@
           '@': {
             templateUrl: 'app/templates/layout.html',
             controller: 'AppCtrl'
+          },
+          'sidebar@app': {
+            controller: '',
+            templateUrl: 'app/templates/sidebar.html'
           }
         }
       })
@@ -79,6 +83,35 @@
                   '<item-details item="item" opinions="opinions"></item-details>' +
                 '</ion-content>' + 
               '</ion-view>'
+          }
+        }
+      })
+      .state('app.myOrders', {
+        url: '/user/:userId/myOrders',
+        resolve: {
+          items: ['MockedData', function (MockedData) {
+            return MockedData.getItems();
+          }],
+          orders: ['MockedData', function (MockedData) {
+            return MockedData.getOrders();
+          }],
+          orderItems:['MockedData', function (MockedData) {
+            return MockedData.getOrderItems();
+          }]
+        },
+        views: {
+          'content@app': {
+            controller: ['$scope', '$stateParams', 'items', 'orders', 'orderItems', function ($scope, $stateParams, items, orders, orderItems) {
+              var userOrders = [];
+              /*
+              orders.forEach(function (_order) {
+                if (order.userId === $stateParams.userId) {
+                  _order.items = [];
+                  userOrders.push(_order);
+                }
+              });
+              */
+            }]
           }
         }
       })
