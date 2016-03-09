@@ -11,15 +11,16 @@
   <div class="row padding-bottom" ng-repeat="item in cartSummary.ngCart.getCart().items track by $index" ng-class="{'oddRow': $index % 2 === 1, 'evenRow': $index % 2 === 0}">
     <div class="col-25 padding-right">
       <span ng-click="cartSummary.ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span>
-      {{item.getName()}}
+      <img ng-src="{{item._data.picto}}" ui-sref="app.itemDetail({itemId: item._id})" class="iconImage"/>
+      <p>{{item.getName()}}</p>
     </div>
-    <div class="col-25">
+    <div class="col-25 col-center">
       <span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}" ng-click="item.setQuantity(-1, true)"></span>
       {{ item.getQuantity() | number }}
       <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span>
     </div>
-    <div class="col-25">{{ item.getPrice() | currency}}</div>
-    <div class="col-25">{{ item.getTotal() | currency}}</div>
+    <div class="col-25 col-center" >{{ item.getPrice() | currency}}</div>
+    <div class="col-25 col-center">{{ item.getTotal() | currency}}</div>
   </div>
   <!-- TAX ROW -->
   <div class="row" ng-show="cartSummary.ngCart.getTax()">

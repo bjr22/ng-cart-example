@@ -1,10 +1,10 @@
 <div>
   <div>
     <h5> Average rate </h5>
-    <rating ng-if="opinionList.averageRate" ng-model="opinionList.averageRate" max="opinionList.maxRate"></rating>
+    <rating readonly="readOnly" ng-if="opinionList.averageRate" ng-model="opinionList.averageRate" max="opinionList.maxRate"></rating>
   </div>
   <div class="card" ng-repeat="opinion in opinionList.opinions track by $index">
-    <rating ng-model="opinion.rate" max="opinionList.maxRate"></rating>
+    <rating readonly="readOnly" ng-model="opinion.rate" max="opinionList.maxRate"></rating>
     <p>{{opinion.opinion}}</p>
   </div>
 </div>

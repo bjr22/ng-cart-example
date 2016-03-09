@@ -24,6 +24,8 @@
     var vm = this;
     vm.item = $scope.item;
     vm.detailed = $scope.detailed;
+    
+    $scope.readOnly = true; //readOnly rating directive
     $scope.rating = {
       rate: vm.item.averageRate,
       max: 5      

@@ -28,5 +28,6 @@
       _averageRate += _opinion.rate;
     });
     vm.averageRate = _averageRate / vm.opinions.length;
+    $scope.readOnly = true; //To make rating directive readOnly
   }
 })();

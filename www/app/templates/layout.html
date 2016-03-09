@@ -13,21 +13,20 @@
         <button menu-toggle="left" class="button button-icon button-clear">
           <i class="icon ion-navicon"></i>
         </button>
+        <button ng-if="!$state.is('app.home')" ng-click="manageGoHome()" class="button button-icon button-clear">
+          <i class="icon ion-home"></i>
+        </button>
       </ion-nav-buttons>
       
       <ion-nav-buttons side="right">
         <button ng-if="!$state.is('app.cartResume') && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume" >
           <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
-          <!--ngcart-summary></ngcart-summary-->
         </button>
-        <!-- Button that toggles menu -->
-        <!--span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span-->
       </ion-nav-buttons>
     </ion-nav-bar>
 
     <!-- Content -->
     <ion-nav-view name="content">
-        <!--span>{{ngCart.getTotalItems()}}</span-->
     </ion-nav-view>
   </ion-side-menu-content>
   

@@ -55,7 +55,12 @@ p {
     background-color: white;
   }
 
-  
+/* CART SUMMARY ICONIZING IMAGE */
+
+  .iconImage {
+    width: 64px;
+    height: 64px;
+  }
 
 /* STRIPED TABLE */
 
