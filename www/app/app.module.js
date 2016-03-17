@@ -9,6 +9,7 @@
     'ngCartExample.cartSummary',
     'ngCartExample.opinionList',
     'ngCartExample.itemDetails',
+    'ngCartExample.myProfile',
     'ionic.rating'
   ]);
 })();

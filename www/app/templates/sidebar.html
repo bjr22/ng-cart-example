@@ -4,7 +4,7 @@
       <span>Sidebar</span>
     </div>
   </div>
-  <ion-scroll has-bouncing="false" scroll="false">
+  <ion-content has-bouncing="false" scroll="false">
     <ion-list class="list">
       <ion-item class="item item-icon-left">
         <i class="icon ion-bag"></i>
@@ -12,8 +12,8 @@
       </ion-item>
       <ion-item class="item item-icon-left">
         <i class="icon ion-person"></i>
-        <p>My Profile</p>
+        <a ui-sref="app.myProfile">My Profile</a>
       </ion-item>
     </ion-list>
-  </ion-scroll>
-</ion-content>
+  </ion-content>
+</ion-content>  
