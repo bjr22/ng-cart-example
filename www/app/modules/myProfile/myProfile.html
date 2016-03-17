@@ -1,0 +1,36 @@
+<div class="row unlimited-items responsive-md">
+    
+    <!--    Avatar del user-->
+    <a class="item item-avatar">
+        <img src="assets/img/husky.jpg">
+    </a>
+    
+    <!--    Información del user:-->
+    <div class="col-33" ng-repeat="user in myProfile.users track by user.id">
+        <div ng-if="user.id == 'user1'">
+            <div class="list">
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="{{user.name}}">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Lastname</span>
+                <input type="text" placeholder="{{user.lastName}}">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">BirthDate</span>
+                <input type="text" placeholder="{{user.birthDate}}">
+              </label>
+                <label class="item item-input item-stacked-label">
+                <span class="input-label">Address</span>
+                <div class="col-33" ng-repeat="address in myProfile.addresses track by address.id">
+                    <div ng-if="address.id == 'address1'">
+                        <input type="text" placeholder="{{address.address}}">
+                    </div>
+                </div>
+              </label>
+            </div>
+        </div> 
+    </div>
+<!--    <button ng-click="update()">Modify</button>-->
+</div>

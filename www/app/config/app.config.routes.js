@@ -144,6 +144,25 @@
           }
         }
       })
+    /* MY PROFILE */
+    .state('app.myProfile', {
+        url: '/my-profile',
+        resolve: {
+            users: ['MockedData', function(MockedData) {
+                return MockedData.getUsers();
+            }]
+        },
+        views: {
+          'content@app': {
+            template:
+              '<ion-view ng-cloak can-swipe-back="false" view-title="My Profile">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<my-profile></my-profile>' +
+                '</ion-content>' + 
+              '</ion-view>'
+          }
+        }
+      })
     ;
   }
 })();
