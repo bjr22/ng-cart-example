@@ -24,10 +24,16 @@
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
+    
+    <!-- SUBHEADER -->
+    <!--ion-nav-view class="bar bar-subheader bar-assertive" name="subheader"> 
+    </ion-nav-view-->
 
-    <!-- Content -->
-    <ion-nav-view name="content">
-    </ion-nav-view>
+    <!-- CONTENT -->
+    <ion-view ng-cloak can-swipe-back="false"> 
+      <ion-nav-view name="content"> 
+      </ion-nav-view>
+    </ion-view>
   </ion-side-menu-content>
   
   <!-- SIDE MENU -->

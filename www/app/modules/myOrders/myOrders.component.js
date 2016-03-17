@@ -8,7 +8,9 @@
   function myOrders() {
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+        orders: '='
+      },
       bindToController: {},
       controller: myOrdersController,
       controllerAs: 'myOrders',
@@ -19,6 +21,6 @@
   myOrdersController.$inject = ['$scope'];
   function myOrdersController($scope) {
     var vm = this;
-    
+    vm.orders = $scope.orders;
   }
 })();

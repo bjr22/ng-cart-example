@@ -37,6 +37,24 @@
         }
       })
       /* CART RESUME */
+    /*
+      .state('app.cartResumeSubHeader',{
+        abstract:true,
+        viws: {
+          'content@app': {
+            controller: ['ngCart', function (ngCart) {}],
+            template:
+              '<ion-view ng-cloak can-swipe-back="false" class="has-subheader" view-title="Cart Summary">' +
+                '<div class="bar bar-subheader">' +
+                  '<h4 class"">Total: {{ngCart.totalCost()}}</h4>' +
+                '</div>' +
+                '<ion-nav-view name="content">' +
+                '</ion-nav-view>' +
+              '</ion-view>'
+          }
+        }
+      })
+      */
       .state('app.cartResume', {
         url: '/cart-resume',
         views: {
@@ -47,6 +65,17 @@
                   '<cart-summary></cart-summary>' +
                 '</ion-content>' + 
               '</ion-view>'
+          },
+          'subheader@app': {
+            template:
+              '<ion-view>' +
+                '<ion-content class="has-subheader">' +
+                  '<div class="bar bar-subheader">' +
+                    '<h4 class"">Total: {{ngCart.totalCost()}}</h4>' +
+                  '</div>' +
+                '</ion-content>' +
+              '</ion-view>',
+            controller: ['ngCart', function (ngCart) {}]
           }
         }
       })
