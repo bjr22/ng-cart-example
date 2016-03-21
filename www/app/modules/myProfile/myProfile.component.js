@@ -18,45 +18,32 @@
     }
   };
   
-myProfileController.$inject = ['$scope', 'MockedData','$ionicPopup'];
-    function myProfileController($scope, MockedData,$ionicPopup) {
-        var vm = this;
-        vm.user = {}
-        
-        vm.users = [];
-        MockedData.   getUsers().then(function (response) {
-            vm.users = response;
-            
-            angular.forEach(vm.users, function(value, key) {
-                if(value.id == 'user1') {
-                    vm.user.id = value.id;
-                    vm.user.name = value.name;
-                    vm.user.lastName = value.lastName;
-                    vm.user.birthDate = value.birthDate;
-                }
-            });
-        });
-                
-        vm.addresses = [];
-        MockedData.getShipmentAddresses().then(function (response) {
-            vm.addresses = response;
-            
-            angular.forEach(vm.addresses, function(value, key) {
-                if(value.id == 'address1') {
-                    vm.user.address = value.address;           
-                }
-            });
-        });
-         
-       $scope.showAlert = function() {
-           var alertPopup = $ionicPopup.alert({
-            title: 'Datos modificados correctamente',
-            template:   
-                'Nombre usuario: '+vm.user.name+'<br>'+'Apellido: '+vm.user.lastName+'<br>'+
-                'Fecha de nacimiento: '+vm.user.birthDate+'<br>'+'Dirección: '+vm.user.address+'<br>'
-            
-               
-            });
-       };
-    }
+  myProfileController.$inject = ['$scope', '$ionicPopup', 'UsersConstants', 'UsersStore', 'UsersAction', 'MockedData', 'AddressesConstants', 'AddressesStore', 'AddressesAction'];
+  function myProfileController($scope, $ionicPopup, UsersConstants, UsersStore, UsersAction, MockedData, AddressesConstants, AddressesStore, AddressesAction) {
+    var vm = this;
+    vm.user = null;
+
+    UsersStore.getUserById('user1').then(function (_user) {
+      console.log(_user);
+      vm.user = _user;
+      AddressesStore.getAddressById(vm.user.addressId).then(function (_address) {
+        vm.user.address = _address;
+		console.log(vm.user.address);
+      });
+    });
+
+    vm.showAlert = function() {
+      var alertPopup = $ionicPopup.alert({
+        title: 'Datos modificados correctamente',
+        template:   
+          'Nombre usuario: ' + vm.user.name +
+		  '<br>'+'Apellido: ' + vm.user.lastName +
+		  '<br>'+'Fecha de nacimiento: ' + vm.user.birthDate +
+		  '<br>'+'Dirección: ' + vm.user.address.address +
+		  '<br>'+'Codigo postal: ' + vm.user.address.postalCode + 
+		  '<br>'+'Ciudad: ' + vm.user.address.city +
+		  '<br>'+'Pais: ' + vm.user.address.country
+      });
+    };
+  }
 })();

@@ -4,20 +4,23 @@
     "name": "John",
     "lastName": "Doe",
     "birthDate": "20/11/1975",
-    "addressId": "address1"
+    "addressId": "address1",
+    "picto": "assets/img/avatar.png"
   },
   {
     "id": "user2",
     "name": "Tyler",
     "lastName": "Durden",
     "birthDate": "24/05/1982",
-    "addressId": "address2"
+    "addressId": "address2",
+    "picto": "assets/img/avatar.png"
   },
   {
     "id": "user3",
     "name": "Amy",
     "lastName": "Berhome",
     "birthDate": "10/06/1985",
-    "addressId": "address3"
+    "addressId": "address3",
+    "picto": "assets/img/avatar.png"
   }
 ]

@@ -1,27 +1,44 @@
-<div class="row unlimited-items responsive-md">
-    
-    <a class="item item-avatar"><img src="assets/img/husky.jpg" id="img_husky"></a>
-
-    <div class="list">
-        <label class="item item-input item-stacked-label">
-            <span class="input-label">Name</span>
-            <input type="text" ng-model="myProfile.user.name" style="color:#0C60EE;">
-        </label>
-        <label class="item item-input item-stacked-label">
-            <span class="input-label">Lastname</span>
-            <input type="text" ng-model="myProfile.user.lastName"  style="color:#0C60EE;">
-        </label>
-        <label class="item item-input item-stacked-label">
-            <span class="input-label">BirthDate</span>
-            <input type="text" ng-model="myProfile.user.birthDate" style="color:#0C60EE;">
-        </label>
-        <label class="item item-input item-stacked-label">
-            <span class="input-label">Address</span>
-            <input type="text" ng-model="myProfile.user.address" style="color:#0C60EE;">
-        </label>
-    </div>
-    <div style="text-align:center;">
-        <button class="button button-dark" ng-click="showAlert()" id="button_Modify">Modify</button>
-    </div>
-    
+<div class="row unlimited-items responsive-md" ng-if="myProfile.user">
+	<!--a class="item item-avatar">
+		<img src="{{myProfile.user.picto}}" class="user_avatar">
+		<h2>My profile</h2>
+		<p>Oh my god the profiles</p>
+	</a-->
+	<button class="button button-block button-positive" ng-click="myProfile.showAlert()" >Modify</button>
+	
+	<h4>User Information</h4>
+	<div class="list">
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">First Name</span>
+			<input type="text" ng-model="myProfile.user.name">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Last Name</span>
+			<input type="text" ng-model="myProfile.user.lastName">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">BirthDate</span>
+			<input type="text" ng-model="myProfile.user.birthDate">
+		</label>
+	</div>
+	
+	<h4>Shipment Address</h4>
+	<div class="list">
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Address</span>
+			<input type="text" ng-model="myProfile.user.address.address">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Postal code</span>
+			<input type="text" ng-model="myProfile.user.address.postalCode">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">City</span>
+			<input type="text" ng-model="myProfile.user.address.city">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Country</span>
+			<input type="text" ng-model="myProfile.user.address.country">
+		</label>
+	</div>
 </div>

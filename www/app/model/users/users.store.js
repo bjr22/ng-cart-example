@@ -3,14 +3,14 @@
   
   angular
     .module('ngCartExample.stores')
-    .constant('UsersConstant', {
+    .constant('UsersConstants', {
       USER_UPDATE: 'user.update'
     })
     .factory('UsersAction', UsersAction)
     .store('UsersStore', UsersStore);
   
-  UsersStore.$inject = ['$q', 'UsersConstant', 'MockedData'];
-  function UsersStore($q, UsersConstant, MockedData) {
+  UsersStore.$inject = ['$q', 'UsersConstants', 'MockedData'];
+  function UsersStore($q, UsersConstants, MockedData) {
     var _user = null;
     
     var returnStore = {
@@ -24,31 +24,33 @@
               users.forEach(function(user) {
                 if (user.id = userId) {
                   _user = user;
+                  defer.resolve(_user);
                 }
               });
             });
+          } else {
+            defer.resolve(_user);
           }
           
-          defer.resovle(_user);
           return defer.promise;
         }
       }
     };
     
-    returnStore.handlers[UsersConstant.USER_UPDATE] = function(user) {
+    returnStore.handlers[UsersConstants.USER_UPDATE] = function(user) {
       _user = null;
-      this.emit(UsersConstant.USER_UPDATE, user);
+      this.emit(UsersConstants.USER_UPDATE, user);
     }
     
     return returnStore;
   };
   
-  UsersAction.$inject = ['flux', 'UsersConstant', 'MockedData'];
-  function UsersAction (flux, UsersConstant, MockedData) {
+  UsersAction.$inject = ['flux', 'UsersConstants', 'MockedData'];
+  function UsersAction (flux, UsersConstants, MockedData) {
     return {
       updateUser: function () {
         return MockedData.getUsers().then(function (users) {
-          flux.dispath(UsersConstant.USER_UPDATE, users[1]);
+          flux.dispath(UsersConstants.USER_UPDATE, users[1]); //fake update
         });
       }
     }
