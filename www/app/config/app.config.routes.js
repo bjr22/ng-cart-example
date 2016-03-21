@@ -37,7 +37,7 @@
         }
       })
       /* CART RESUME */
-    /*
+    
       .state('app.cartResumeSubHeader',{
         abstract:true,
         viws: {
@@ -54,7 +54,7 @@
           }
         }
       })
-      */
+      
       .state('app.cartResume', {
         url: '/cart-resume',
         views: {

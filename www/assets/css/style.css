@@ -48,7 +48,7 @@ p {
   .title {
     text-align: center;
     font-size: 20px;
-    color:#1758AA;
+    /* color:#1758AA; */
   }
 
   .menu-header {
@@ -80,3 +80,18 @@ p {
 .gi-5x{font-size: 5em;}
 
 /**/
+#img_husky {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    /* max-width: 41px; */
+    max-height: 40px;
+    width: 200%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#button_Modify {
+    padding: 5px 50px 5px 50px;
+    background-color: #387ef5;
+}
