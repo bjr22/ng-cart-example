@@ -8,9 +8,7 @@
   function myProfile() {
     return {
       restrict: 'E',
-      scope: {
-          address: '='
-      },
+      scope: {},
       bindToController: {},
       controller: myProfileController,
       controllerAs: 'myProfile',

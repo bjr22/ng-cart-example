@@ -116,7 +116,7 @@
         }
       })
       .state('app.myOrders', {
-        url: '/user/:userId/myOrders',
+        url: '/myOrders',
         resolve: {
           items: ['MockedData', function (MockedData) {
             return MockedData.getItems();
@@ -130,17 +130,12 @@
         },
         views: {
           'content@app': {
-            controller: ['$scope', '$stateParams', 'items', 'orders', 'orderItems', function ($scope, $stateParams, items, orders, orderItems) {
-              var userOrders = [];
-              /*
-              orders.forEach(function (_order) {
-                if (order.userId === $stateParams.userId) {
-                  _order.items = [];
-                  userOrders.push(_order);
-                }
-              });
-              */
-            }]
+            template:
+              '<ion-view ng-cloak can-swipe-back="false" view-title="My Orders">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<my-orders></my-orders>' +
+                '</ion-content>' + 
+              '</ion-view>'
           }
         }
       })
