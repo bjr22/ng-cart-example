@@ -47,7 +47,7 @@
 	function OrdersAction (flux, OrdersConstants, MockedData) {
 		return {
 			updateOrder: function () {
-				return MockedData.getOrder().then(function (orders) {
+				return MockedData.getOrders().then(function (orders) {
 					flux.dispatch(OrdersConstants.ORDER_UPDATE, orders[0]);//fake update
 				});
 			}
