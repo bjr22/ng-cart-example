@@ -16,12 +16,12 @@
     }
   };
   
-  onSaleItemListController.$inject = ['$scope', 'MockedData'];
-  function onSaleItemListController($scope, MockedData) {
+  onSaleItemListController.$inject = ['$scope', 'ItemsConstants', 'ItemsAction', 'ItemsStore'];
+  function onSaleItemListController($scope, ItemsConstants, ItemsAction, ItemsStore) {
     var vm = this;
     vm.items = [];
-    MockedData.getItems().then(function (response) {
-      vm.items = response;
+	ItemsStore.getItems().then( function (_items) {
+      vm.items = _items;
     });
   }
 })();
