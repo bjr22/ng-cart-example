@@ -22,11 +22,9 @@
     vm.user = null;
 
     UsersStore.getUserById('user1').then(function (_user) {
-      console.log(_user);
       vm.user = _user;
       AddressesStore.getAddressById(vm.user.addressId).then(function (_address) {
         vm.user.address = _address;
-		console.log(vm.user.address);
       });
     });
 
