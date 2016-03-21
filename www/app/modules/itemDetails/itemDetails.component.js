@@ -25,4 +25,5 @@
     vm.item = $scope.item;
     vm.opinions = $scope.opinions;
   }
+  
 })();
