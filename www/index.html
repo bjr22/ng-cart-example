@@ -139,7 +139,7 @@
 
             </div>
           </script>
-<!--
+    <!--
       </ion-content>
     </ion-pane-->
     
@@ -152,6 +152,11 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    
+    <!-- 3rd PARTY MODULES -->
+    <script src="lib/ngCart/dist/ngCart.js"></script>
+    <script src="lib/ionic-rating/ionic-rating.min.js"></script>
+    <script src="lib/flux-angular/release/flux-angular.js"></script>
 
     <!-- your app's js -->
     <script src="app/app.module.js"></script>
@@ -162,19 +167,20 @@
     <!-- MOCK DATA FACTORY -->
     <script src="app/config/app.mocked.data.js"></script>
     
-    <!-- MODULES -->
+    <!-- FLUX STORES -->
+    <script src="app/config/app.config.flux.js"></script>
+    <script src="app/model/users/users.store.js"></script>
+    
+    <!-- COMPONENTS / SCREENS -->
     <script src="app/modules/itemDetails/onSaleItem/onSaleItem.component.js"></script>
     <script src="app/modules/itemDetails/opinionList/opinionList.component.js"></script>
     <script src="app/modules/itemDetails/itemDetails.component.js"></script>
     <script src="app/modules/onSaleItemList/onSaleItemList.component.js"></script>
     <script src="app/modules/cartSummary/cartSummary.component.js"></script>
-    <script src="app/modules/myProfile/myProfile.component.js"></script> 
+    <script src="app/modules/myProfile/myProfile.component.js"></script>
     
     <!--script src="lib/angular/angular.js"></script-->
 
-    <!-- INSTALLED PACAKGES -->
-    <script src="lib/ngCart/dist/ngCart.js"></script>
-    <script src="lib/ionic-rating/ionic-rating.min.js"></script>
     
     <!-- Latest compiled and minified CSS -->
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->

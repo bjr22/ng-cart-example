@@ -9,6 +9,6 @@
     "ngCart": "ngcart#~1.0.0",
     "bootstrap": "~3.3.6",
     "ionic-rating": "~0.2.0",
-    "flux-angular": "~3.0.0"
+    "flux-angular": "~2.6.0"
   }
 }
