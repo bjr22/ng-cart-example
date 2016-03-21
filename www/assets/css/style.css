@@ -80,7 +80,7 @@ p {
 .gi-5x{font-size: 5em;}
 
 /**/
-#img_husky {
+.avatar {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -94,4 +94,8 @@ p {
 #button_Modify {
     padding: 5px 50px 5px 50px;
     background-color: #387ef5;
+}
+
+.align-center {
+    text-align: center;
 }

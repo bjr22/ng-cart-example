@@ -17,6 +17,7 @@
     'ngCartExample.cartSummary',
     'ngCartExample.opinionList',
     'ngCartExample.itemDetails',
-    'ngCartExample.myProfile'
+    'ngCartExample.myProfile',
+    'ngCartExample.myOrders' 
   ]);
 })();

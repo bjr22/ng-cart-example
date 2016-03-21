@@ -8,9 +8,7 @@
   function myProfile() {
     return {
       restrict: 'E',
-      scope: {
-          address: '='
-      },
+      scope: {},
       bindToController: {},
       controller: myProfileController,
       controllerAs: 'myProfile',
@@ -27,12 +25,9 @@ myProfileController.$inject = ['$scope', 'MockedData','$ionicPopup'];
         MockedData.   getUsers().then(function (response) {
             vm.users = response;
             
-            angular.forEach(vm.users, function(value, key) {
-                if(value.id == 'user1') {
-                    vm.user.id = value.id;
-                    vm.user.name = value.name;
-                    vm.user.lastName = value.lastName;
-                    vm.user.birthDate = value.birthDate;
+            angular.forEach(vm.users, function(_user) {
+                if(_user.id == 'user1') {
+                    vm.user = _user;
                 }
             });
         });
@@ -41,9 +36,9 @@ myProfileController.$inject = ['$scope', 'MockedData','$ionicPopup'];
         MockedData.getShipmentAddresses().then(function (response) {
             vm.addresses = response;
             
-            angular.forEach(vm.addresses, function(value, key) {
-                if(value.id == 'address1') {
-                    vm.user.address = value.address;           
+            angular.forEach(vm.addresses, function(_address) {
+                if(_address.id == 'address1') {
+                    vm.user.address = _address.address;           
                 }
             });
         });
@@ -54,8 +49,6 @@ myProfileController.$inject = ['$scope', 'MockedData','$ionicPopup'];
             template:   
                 'Nombre usuario: '+vm.user.name+'<br>'+'Apellido: '+vm.user.lastName+'<br>'+
                 'Fecha de nacimiento: '+vm.user.birthDate+'<br>'+'Dirección: '+vm.user.address+'<br>'
-            
-               
             });
        };
     }
