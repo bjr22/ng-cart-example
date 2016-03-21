@@ -21,13 +21,7 @@
 myProfileController.$inject = ['$scope', 'MockedData','$ionicPopup'];
     function myProfileController($scope, MockedData,$ionicPopup) {
         var vm = this;
-        vm.user = {
-            'id': '',
-            'name' : '',
-            'lastName' : '',
-            'birthDate' : '',
-            'address' : '',
-        }
+        vm.user = {}
         
         vm.users = [];
         MockedData.   getUsers().then(function (response) {
