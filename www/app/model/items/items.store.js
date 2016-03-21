@@ -4,7 +4,7 @@
 	angular
 		.module('ngCartExample.stores')
 		.constant('ItemsConstants', {
-			ITEM_UPDATE: 'items.update'
+			ITEM_UPDATE: 'item.update'
 		})
 		.factory('ItemsAction', ItemsAction)
 		.store('ItemsStore', ItemsStore);
@@ -52,5 +52,5 @@
 				});
 			}
 		}
-	}
+	};
 })();
