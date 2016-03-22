@@ -2,10 +2,10 @@
   'use strict';
   
   angular
-    .module('ngCartExample.onSaleItem', [])
-    .directive('onSaleItem', onSaleItemDirective);
+    .module('ngCartExample.itemInfo', [])
+    .directive('itemInfo', itemInfoDirective);
   
-  function onSaleItemDirective() {
+  function itemInfoDirective() {
     return {
       restrict: 'E',
       scope: {
@@ -13,14 +13,14 @@
         detailed: '='
       },
       bindToController: {},
-      controller: onSaleItemController,
-      controllerAs: 'onSaleItem',
-      templateUrl: 'app/modules/itemDetails/onSaleItem/onSaleItem.html'
+      controller: itemInfoController,
+      controllerAs: 'itemInfo',
+      templateUrl: 'app/modules/itemDetails/itemInfo/itemInfo.html'
     };
   };
   
-  onSaleItemController.$inject = ['$scope', '$state'];
-  function onSaleItemController($scope, $state) {
+  itemInfoController.$inject = ['$scope', '$state'];
+  function itemInfoController($scope, $state) {
     var vm = this;
     vm.item = $scope.item;
     vm.detailed = $scope.detailed;

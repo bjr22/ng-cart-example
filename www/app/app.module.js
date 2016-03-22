@@ -11,11 +11,13 @@
     //STORES
     'ngCartExample.stores',
     
-    //DIRECTIVES
-    'ngCartExample.onSaleItem',
-    'ngCartExample.onSaleItemList',
-    'ngCartExample.cartSummary',
+    //DIRECTIVE MODULES
+    'ngCartExample.itemInfo',
     'ngCartExample.opinionList',
+    
+    //SCREEN MODULES
+    'ngCartExample.itemList',
+    'ngCartExample.cartSummary',
     'ngCartExample.itemDetails',
     'ngCartExample.myProfile',
     'ngCartExample.myOrders',

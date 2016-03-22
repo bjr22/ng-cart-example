@@ -1,5 +1,7 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
+    
+    <!-- HEADER -->
     <ion-nav-bar class="bar-positive">
       <ion-nav-back-button class="no-text" >
       </ion-nav-back-button>
@@ -13,8 +15,10 @@
       </ion-nav-buttons>
     </ion-nav-bar>
     
+    <!-- CONTENT VIEWS -->
     <ion-nav-view name="content"></ion-nav-view>
     
+    <!-- SUBHEADER -->
     <ion-header-bar class="bar-subheader bar-positive item-input-inset" ng-if="showSubheader()">
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
@@ -23,6 +27,8 @@
       <button class="button button-stable" ui-sref="app.login"><b>Login</b></button>
     </ion-header-bar>
   </ion-side-menu-content>
+  
+  <!-- SIDEBAR -->
   <ion-side-menu side="left">
     <ion-nav-view name="sidebar"></ion-nav-view>
   </ion-side-menu>  

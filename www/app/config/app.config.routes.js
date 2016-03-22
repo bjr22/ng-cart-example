@@ -30,7 +30,7 @@
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Home">' +
                 '<ion-content class="has-subheader" has-bouncing="false"  >' +
-                  '<on-sale-item-list></on-sale-item-list>' +
+                  '<item-list></item-list>' +
                 '</ion-content>' + 
               '</ion-view>'
           }

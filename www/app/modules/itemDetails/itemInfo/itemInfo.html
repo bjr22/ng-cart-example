@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <h3>{{itemInfo.item.name}}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p><span class="section-category"><b>Section:</b></span> {{itemInfo.item.section}}</p>
+  </div>
+  <div class="col">
+    <p><span class="section-category"><b>Category:</b></span> {{itemInfo.item.category}}</p>
+  </div>
+</div>
+<div class="row">
+  <rating readonly="readOnly" ng-model="rating.rate" max="rating.max"></rating>
+</div>
+<div class="row">
+  <div class="col-50">
+    <img class="responsiveItemImg" ng-src="{{itemInfo.item.picto}}" ng-click="itemInfo.manageClickOnImage()"/>
+  </div>
+  <div class="col-50">
+    <ngcart-addtocart id="{{itemInfo.item.id}}" name="{{itemInfo.item.name}}" price="{{itemInfo.item.price}}" quantity="1" quantity-max="5" data="itemInfo.item">Add to Cart</ngcart-addtocart>
+  </div>
+</div>
+<div class="row" ng-if="itemInfo.detailed">
+    <p>{{itemInfo.item.description}}</p>
+</div>
