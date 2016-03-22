@@ -1,5 +1,3 @@
-<div class="row unlimited-items responsive-md">
-  <div class="col-33" ng-repeat="item in itemList.items track by item.id">
-    <item-info item="item" detailed="false"></item-info>
-  </div>
+<div class="list">
+  <item-info ng-repeat="item in itemList.items track by item.id" item="item" detailed="false"></item-info>
 </div>

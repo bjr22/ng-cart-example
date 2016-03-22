@@ -31,12 +31,8 @@
       max: 5      
     };
     
-    vm.manageClickOnImage = function () {
-      if (vm.detailed) {
-        // functionality when the item is shown as detailed one
-      } else {
-        $state.go('app.itemDetail', {itemId: vm.item.id});
-      }
+    vm.clickOnItem = function () {
+      $state.go('app.itemDetail', {itemId: vm.item.id});
     }
   };
   
