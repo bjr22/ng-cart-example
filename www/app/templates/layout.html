@@ -1,45 +1,49 @@
 <ion-side-menus enable-menu-with-back-views="false">
-  <!-- Main content -->
-  <ion-side-menu-content drag-content="false">
-    <!-- Navigation bar -->
-    <ion-nav-bar class="bar-positive">
-      <!-- Back button, for nested screens -->
-      <ion-nav-back-button class="no-text" >
-      </ion-nav-back-button>
-      
-      <!-- Navigation menus aligned to the left -->
-      <ion-nav-buttons side="left">
-        <!-- Button that toggles menu -->
-        <button menu-toggle="left" class="button button-icon button-clear">
-          <i class="icon ion-navicon"></i>
-        </button>
-        <button ng-if="!$state.is('app.home')" ng-click="manageGoHome()" class="button button-icon button-clear">
-          <i class="icon ion-home"></i>
-        </button>
-      </ion-nav-buttons>
-      
-      <ion-nav-buttons side="right">
-        <button id="login-button" class="button" ui-sref="app.login" ng-if="!$state.is('app.login')"><b>Login</b></a>
-        <button ng-if="!($state.is('app.cartResume')||$state.is('app.login')) && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume">
-          <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
-        </button>
-      </ion-nav-buttons>
-    </ion-nav-bar>
-    
-    <!-- SUBHEADER -->
-    <!--ion-nav-view class="bar bar-subheader bar-assertive" name="subheader"> 
-    </ion-nav-view-->
-
-    <!-- CONTENT -->
-    <ion-view ng-cloak can-swipe-back="false"> 
-      <ion-nav-view name="content"> 
-      </ion-nav-view>
-    </ion-view>
-  </ion-side-menu-content>
   
+  <!-- HEADER -->
+  <ion-nav-bar class="bar bar-header bar-positive">
+    
+    <!-- Back button, for nested screens -->
+    <ion-nav-back-button class="no-text" >
+    </ion-nav-back-button>
+
+    <!-- NAVIGATION MENUS ON THE LEFT -->
+    <ion-nav-buttons side="left">
+      <!-- SIDEMENU BUTTON -->
+      <button menu-toggle="left" class="button button-icon button-clear">
+        <i class="icon ion-navicon"></i>
+      </button>
+      
+      <!-- HOME BUTTON -->
+      <button ng-if="!$state.is('app.home')" ng-click="manageGoHome()" class="button button-icon button-clear">
+        <i class="icon ion-home"></i>
+      </button>
+    </ion-nav-buttons>
+
+    <!-- NAVIGATION MENUS ON THE RIGHT -->
+    <ion-nav-buttons side="right">
+      <button ng-if="!($state.is('app.cartResume')||$state.is('app.login')) && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume">
+        <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <!-- SUBHEADER -->
+  <div class="bar bar-subheader bar-positive item-input-inset" ng-if="!$state.is('app.login')">
+    <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" placeholder="Search">
+    </label>
+    <button class="button button-stable" ui-sref="app.login"><b>Login</b></button>
+  </div>
+
   <!-- SIDE MENU -->
   <ion-side-menu side="left">
     <ion-nav-view name="sidebar"></ion-nav-view>
   </ion-side-menu>
+  
+  <!-- CONTENT -->
+  <ion-nav-view name="content"> 
+  </ion-nav-view>
   
 </ion-side-menus>
