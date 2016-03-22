@@ -1,10 +1,16 @@
-<div>
+<div ng-if="opinionList.opinions.length > 0">
   <div>
     <h5> Average rate </h5>
     <rating readonly="readOnly" ng-if="opinionList.averageRate" ng-model="opinionList.averageRate" max="opinionList.maxRate"></rating>
   </div>
-  <div class="card" ng-repeat="opinion in opinionList.opinions track by $index">
-    <rating readonly="readOnly" ng-model="opinion.rate" max="opinionList.maxRate"></rating>
-    <p>{{opinion.opinion}}</p>
+  <div class="list">
+    <div class="item-list" ng-repeat="opinion in opinionList.opinions track by $index">
+      <rating class="little-rating" readonly="readOnly" ng-model="opinion.rate" max="opinionList.maxRate"></rating>
+      <p>{{opinion.opinion}}</p>
+    </div>
   </div>
+</div>
+
+<div ng-if="opinionList.opinions.length <= 0">
+  <p class="title">There are not any opinions written about this item yet</p>
 </div>

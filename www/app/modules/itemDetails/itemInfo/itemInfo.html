@@ -38,7 +38,7 @@
   
     <p>{{itemInfo.item.price | currency: "€"}}</p>
   
-    <rating ng-if="itemInfo.detailed" readonly="readOnly" ng-model="rating.rate" max="rating.max"></rating>
+    <!--rating ng-if="itemInfo.detailed" readonly="readOnly" ng-model="rating.rate" max="rating.max"></rating-->
   
     <ngcart-addtocart id="{{itemInfo.item.id}}" ng-if="itemInfo.detailed" name="{{itemInfo.item.name}}" price="{{itemInfo.item.price}}" quantity="1" quantity-max="5" data="itemInfo.item">Add to Cart</ngcart-addtocart>
   
