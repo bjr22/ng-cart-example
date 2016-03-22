@@ -98,3 +98,10 @@ p {
 .blue-text {
   color:#0C60EE;
 }
+
+/* LOGIN BUTTON */
+#login-button {
+  margin-right: 20px;
+  background-color: #E58500;
+  color: #E5E5E5;
+}

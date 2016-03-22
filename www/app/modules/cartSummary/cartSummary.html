@@ -1,5 +1,12 @@
-<div class="col-lg-12">
-  
+<div>
+	<!--div class="list">
+		<a ng-repeat="item in cartSummary.ngCart.getCart().items track by $index" class="item item-thumbnail-left" href="#">
+			<img ng-src="{{item._data.picto}}">
+			<h2>{{item.getName()}}</h2>
+			<p>{{item.getPrice() | currency:"€"}}</p>
+		</a>
+	</div-->
+	
   <!-- HEADER ROW -->
   <div class="row header">
     <div class="col-25 padding-right"><b>Item</b></div>
@@ -19,8 +26,8 @@
       {{ item.getQuantity() | number }}
       <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span>
     </div>
-    <div class="col-25 col-center" >{{ item.getPrice() | currency}}</div>
-    <div class="col-25 col-center">{{ item.getTotal() | currency}}</div>
+    <div class="col-25 col-center" >{{ item.getPrice() | currency }}</div>
+    <div class="col-25 col-center">{{ item.getTotal() | currency }}</div>
   </div>
   <!-- TAX ROW -->
   <div class="row" ng-show="cartSummary.ngCart.getTax()">
@@ -37,5 +44,4 @@
     <div class="col-25 col-offset-50"><b>Total:</b></div>
     <div class="col-25">{{ cartSummary.ngCart.totalCost() | currency }}</div>
   </div>
-  
 </div>

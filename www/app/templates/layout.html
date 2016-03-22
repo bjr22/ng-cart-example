@@ -19,7 +19,8 @@
       </ion-nav-buttons>
       
       <ion-nav-buttons side="right">
-        <button ng-if="!$state.is('app.cartResume') && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume" >
+        <button id="login-button" class="button" ui-sref="app.login" ng-if="!$state.is('app.login')"><b>Login</b></a>
+        <button ng-if="!($state.is('app.cartResume')||$state.is('app.login')) && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume">
           <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
         </button>
       </ion-nav-buttons>

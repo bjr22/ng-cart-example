@@ -79,6 +79,20 @@
           }
         }
       })
+      /* LOGIN */
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'content@app': {
+            template:
+              '<ion-view ng-cloak can-swipe-back="false" view-title="Item details">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<login></login>' +
+                '</ion-content>' + 
+              '</ion-view>'
+          }
+        }
+      })
       /* ITEM DETAILS */
       .state('app.itemDetail', {
         url: '/item/:itemId',
