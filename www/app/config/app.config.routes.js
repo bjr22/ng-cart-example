@@ -13,8 +13,8 @@
         abstract: true,
         views: {
           '@': {
-            templateUrl: 'app/templates/layout.html',
-            controller: 'AppCtrl'
+            controller: 'AppCtrl',
+            templateUrl: 'app/templates/layout.html'
           },
           'sidebar@app': {
             controller: '',
@@ -29,53 +29,23 @@
           'content@app': {
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Home">' +
-                '<ion-content has-bouncing="false"  >' +
+                '<ion-content class="has-subheader" has-bouncing="false"  >' +
                   '<on-sale-item-list></on-sale-item-list>' +
                 '</ion-content>' + 
               '</ion-view>'
           }
         }
       })
-      /* CART RESUME */
-    
-      .state('app.cartResumeSubHeader',{
-        abstract:true,
-        viws: {
-          'content@app': {
-            controller: ['ngCart', function (ngCart) {}],
-            template:
-              '<ion-view ng-cloak can-swipe-back="false" class="has-subheader" view-title="Cart Summary">' +
-                '<div class="bar bar-subheader">' +
-                  '<h4 class"">Total: {{ngCart.totalCost()}}</h4>' +
-                '</div>' +
-                '<ion-nav-view name="content">' +
-                '</ion-nav-view>' +
-              '</ion-view>'
-          }
-        }
-      })
-      
       .state('app.cartResume', {
         url: '/cart-resume',
         views: {
           'content@app': {
             template:
               '<ion-view ng-cloak can-swipe-back="false" view-title="Cart Summary">' +
-                '<ion-content has-bouncing="false"  >' +
+                '<ion-content class="has-subheader" has-bouncing="false"  >' +
                   '<cart-summary></cart-summary>' +
                 '</ion-content>' + 
               '</ion-view>'
-          },
-          'subheader@app': {
-            template:
-              '<ion-view>' +
-                '<ion-content class="has-subheader">' +
-                  '<div class="bar bar-subheader">' +
-                    '<h4 class"">Total: {{ngCart.totalCost()}}</h4>' +
-                  '</div>' +
-                '</ion-content>' +
-              '</ion-view>',
-            controller: ['ngCart', function (ngCart) {}]
           }
         }
       })
@@ -122,7 +92,7 @@
             }], 
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Item details">' +
-                '<ion-content has-bouncing="false"  >' +
+                '<ion-content class="has-subheader" has-bouncing="false"  >' +
                   '<item-details item="item" opinions="opinions"></item-details>' +
                 '</ion-content>' + 
               '</ion-view>'

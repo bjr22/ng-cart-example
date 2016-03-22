@@ -1,19 +1,17 @@
-<ion-content class="sidebar" has-bouncing="false" scroll="false">
-  <div class="menu-header">
-    <div class="title">
-      <span>Sidebar</span>
-    </div>
-  </div>
-  <ion-content has-bouncing="false" scroll="false">
-    <ion-list class="list">
+<ion-side-menu class="sidebar" >
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Sidebar</h1>
+  </ion-header-bar>
+  <ion-content class="list">
+    <ion-list>
       <ion-item class="item item-icon-left" ui-sref="app.myOrders" menu-close>
         <i class="icon ion-bag"></i>
-        <p>My Orders</p>
+        My Orders
       </ion-item>
       <ion-item class="item item-icon-left" ui-sref="app.myProfile" menu-close>
         <i class="icon ion-person"></i>
-        <p>My Profile</p>
+        My Profile
       </ion-item>
     </ion-list>
   </ion-content>
-</ion-content>  
+</ion-side-menu>  
