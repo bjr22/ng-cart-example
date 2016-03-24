@@ -19,6 +19,7 @@
     'ngCartExample.itemDetails',
     'ngCartExample.myProfile',
     'ngCartExample.myOrders',
-	'ngCartExample.login'
+	'ngCartExample.login',
+    'ngCartExample.myOrdersDetail'
   ]);
 })();

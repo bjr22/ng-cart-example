@@ -1,0 +1,34 @@
+<div class="row unlimited-items responsive-md" ng-if="myOrdersDetail.user">
+    <h4>Shipment Address</h4>
+	<div class="list">
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Address</span>
+            {{myOrdersDetail.user.address.address}}
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Postal code</span>
+			{{myOrdersDetail.user.address.postalCode}}
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">City</span>
+			{{myOrdersDetail.user.address.city}}
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label blue-text">Country</span>
+			{{myOrdersDetail.user.address.country}}
+		</label>
+	</div>
+    
+    <h4>Products</h4>
+    <my-orders></my-orders>
+    
+    <h4>Total</h4>
+	<div class="list">
+        
+
+	</div>
+    <h4>Order's Date</h4>
+	<div class="list">
+        
+	</div>
+</div>

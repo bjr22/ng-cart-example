@@ -153,6 +153,22 @@
           }
         }
       })
+    
+    .state('app.OrderDetail', {
+        url: '/myOrders/:orderId',
+        resolve: {},
+        views: {
+          'content@app': {
+            template: 
+              '<ion-view ng-cloak can-swipe-back="false" view-title="My Orders">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<my-orders-detail></my-orders-detail>' +
+                '</ion-content>' + 
+              '</ion-view>'
+          }
+        }
+      })
+    
     /* MY PROFILE */
     .state('app.myProfile', {
         url: '/my-profile',

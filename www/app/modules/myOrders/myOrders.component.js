@@ -8,7 +8,11 @@
   function myOrders() {
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+          order: '=',
+          orderItems: '=',
+          itemsdetail: '='
+      },
       bindToController: {},
       controller: myOrdersController,
       controllerAs: 'myOrders',
@@ -16,34 +20,59 @@
     };
   }
   
-  myOrdersController.$inject = ['$scope','MockedData'];
-  function myOrdersController($scope,MockedData) {
+  myOrdersController.$inject = ['$scope','MockedData','$state'];
+  function myOrdersController($scope,MockedData,$state) {
       var vm = this;
-      vm.order = {}
-      vm.items = []
-      vm.total = 0;
       
-      vm.orders = []
+      var order = []
       MockedData.getOrders().then(function (response) {
           vm.orders = response;
-      });
-      
-      angular.forEach(vm.orders, function(_order) {
-        if(_order.userId == 'user1') {
-            vm.order = _order;
-        }
+          
+          angular.forEach(vm.orders, function(_order) {
+            if(_order.id == 'order1' || _order.id == 'order2') {
+                order.push(_order);
+            }
+          });
+          vm.order = order;
       });
       
       vm.orderItems = []
       MockedData.getOrderItems().then(function (response) {
           vm.orderItems = response;
           
-          angular.forEach(vm.orderItems, function(_orderitems) {
-              if(_orderitems.orderId == 'order1') {
-                  vm.items.push(_orderitems.itemId);           
-              }
-          });
-      });
+          for(var i = 0; i < vm.order.length; ++i) {
+              order[i].items = []
+              angular.forEach(vm.orderItems, function(_orderitems) {     
+                  if(_orderitems.orderId == vm.order[i].id) {
+                      vm.order[i].items.push(_orderitems.itemId);           
+                  }
+              });
+          }
+          //console.log(vm.order);
+      }); 
       
-    }
+      vm.itemsdetail = []
+      MockedData.getItems().then(function(response) {
+          vm.itemsdetail = response;
+          
+          // Recorremos los orders.
+          for(var i = 0; i < vm.order.length; ++i) {
+              //Recorremos los items de los orders.
+              for(var j = 0; j < vm.order[i].items.length; ++j) {
+                  angular.forEach(vm.itemsdetail, function(_allitems) {
+                      // Añadimos a ese item los detalles.
+                      if(vm.order[i].items[j] == _allitems.id) {
+                          vm.order[i].items[j] = _allitems;
+                      }
+                  });   
+              }
+          }
+          //console.log(vm.order);
+      }); 
+      
+      $scope.order = vm.order || [];
+      $scope.orderItems = vm.orderItems || [];
+      $scope.itemsdetail = vm.itemsdetail || [];
+
+  }
 })();
