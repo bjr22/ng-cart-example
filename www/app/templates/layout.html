@@ -1,45 +1,35 @@
 <ion-side-menus enable-menu-with-back-views="false">
-  <!-- Main content -->
-  <ion-side-menu-content drag-content="false">
-    <!-- Navigation bar -->
+  <ion-side-menu-content>
+    
+    <!-- HEADER -->
     <ion-nav-bar class="bar-positive">
-      <!-- Back button, for nested screens -->
       <ion-nav-back-button class="no-text" >
       </ion-nav-back-button>
       
-      <!-- Navigation menus aligned to the left -->
       <ion-nav-buttons side="left">
-        <!-- Button that toggles menu -->
-        <button menu-toggle="left" class="button button-icon button-clear">
-          <i class="icon ion-navicon"></i>
-        </button>
-        <button ng-if="!$state.is('app.home')" ng-click="manageGoHome()" class="button button-icon button-clear">
-          <i class="icon ion-home"></i>
-        </button>
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        <button ng-if="showHomeButton()" ng-click="manageGoHome()" class="button button-icon button-clear icon ion-home"></button>
       </ion-nav-buttons>
-      
       <ion-nav-buttons side="right">
-        <button id="login-button" class="button" ui-sref="app.login" ng-if="!$state.is('app.login')"><b>Login</b></a>
-        <button ng-if="!($state.is('app.cartResume')||$state.is('app.login')) && ngCart.getTotalItems() > 0" class="button button-stable" ui-sref="app.cartResume">
-          <span class="glyphicon glyphicon-shopping-cart gi-2x" aria-hidden="true"></span>
-        </button>
+        <button ng-if="showCartButton()" class="button button-icon button-clear icon ion-android-cart" ui-sref="app.cartResume"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
     
+    <!-- CONTENT VIEWS -->
+    <ion-nav-view name="content"></ion-nav-view>
+    
     <!-- SUBHEADER -->
-    <!--ion-nav-view class="bar bar-subheader bar-assertive" name="subheader"> 
-    </ion-nav-view-->
-
-    <!-- CONTENT -->
-    <ion-view ng-cloak can-swipe-back="false"> 
-      <ion-nav-view name="content"> 
-      </ion-nav-view>
-    </ion-view>
+    <ion-header-bar class="bar-subheader bar-positive item-input-inset" ng-if="showSubheader()">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+      <button class="button button-stable" ui-sref="app.login"><b>Login</b></button>
+    </ion-header-bar>
   </ion-side-menu-content>
   
-  <!-- SIDE MENU -->
+  <!-- SIDEBAR -->
   <ion-side-menu side="left">
     <ion-nav-view name="sidebar"></ion-nav-view>
-  </ion-side-menu>
-  
+  </ion-side-menu>  
 </ion-side-menus>

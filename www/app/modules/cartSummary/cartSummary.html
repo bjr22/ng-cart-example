@@ -44,4 +44,59 @@
     <div class="row unlimited-items responsive-md">
         <button class="button button-block button-positive">Check Out</button>
 	</div>
+<!--
+=======
+<div ng-if="cartSummary.ngCart.totalCost() > 0">
+  <div class="row">
+    <div class="col">
+      <p class="title">Total: <span>{{ cartSummary.ngCart.totalCost() | currency: "€" }}</span></p>
+    </div>
+    <div class="col"> 
+      <button class="button button-positive" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()">Checkout</button>
+    </div>
+  </div>
+
+  <div>	
+    <div class="row header">
+      <div class="col-25 padding-right"><b>Item</b></div>
+      <div class="col-25"><b>Quantity</b></div>
+      <div class="col-25"><b>Amount</b></div>
+      <div class="col-25"><b>Total</b></div>
+    </div>
+
+    <div class="row padding-bottom" ng-repeat="item in cartSummary.ngCart.getCart().items track by $index" ng-class="{'oddRow': $index % 2 === 1, 'evenRow': $index % 2 === 0}">
+      <div class="col-25 padding-right">
+        <span ng-click="cartSummary.ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span>
+        <img ng-src="{{item._data.picto}}" ui-sref="app.itemDetail({itemId: item._id})" class="iconImage"/>
+        <p>{{item.getName()}}</p>
+      </div>
+      <div class="col-25 col-center">
+        <span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}" ng-click="item.setQuantity(-1, true)"></span>
+        {{ item.getQuantity() | number }}
+        <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span>
+      </div>
+      <div class="col-25 col-center" >{{ item.getPrice() | currency: "€" }}</div>
+      <div class="col-25 col-center">{{ item.getTotal() | currency: "€" }}</div>
+    </div>
+
+    <div class="row" ng-show="cartSummary.ngCart.getTax()">
+      <div class="col-25 col-offset-50"><b>Tax ({{ cartSummary.ngCart.getTaxRate() }}%):</b></div>
+      <div class="col-25">{{ cartSummary.ngCart.getTax() | currency: "€" }}</div>
+    </div>
+
+    <div class="row" ng-show="cartSummary.ngCart.getShipping()">
+      <div class="col-25 col-offset-50"><b>Shipping:</b></div>
+      <div class="col-25">{{ cartSummary.ngCart.getShipping() | currency: "€" }}</div>
+    </div>
+
+    <div class="row">
+      <div class="col-25 col-offset-50"><b>Total:</b></div>
+      <div class="col-25">{{ cartSummary.ngCart.totalCost() | currency: "€" }}</div>
+    </div>
+  </div>
 </div>
+
+<div ng-if="cartSummary.ngCart.totalCost() <= 0">
+  <p class="title">You don't have any item in your basket</p>
+>>>>>>> 083bad8d0e9b2ce26be43d7815f87c7c044f9899
+</div>-->
