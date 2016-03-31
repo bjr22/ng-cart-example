@@ -8,7 +8,10 @@
   function myOrdersDetailDirective() {
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+          items: '=',
+          total: '='
+      },
       bindToController: {},
       controller: myOrdersDetailController,
       controllerAs: 'myOrdersDetail',
@@ -29,13 +32,9 @@
               
             vm.user.address = _address;
           });
-
-           
       });
-    
-      vm.order = $scope.order;
-      vm.orderItems = $scope.orderItems;
-      vm.itemsdetail = $scope.itemsdetail;
-
+      
+      vm.items = $scope.items;
+      vm.total = $scope.total;      
   }
 })();

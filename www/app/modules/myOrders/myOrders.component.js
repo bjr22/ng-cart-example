@@ -8,11 +8,7 @@
   function myOrders() {
     return {
       restrict: 'E',
-      scope: {
-          order: '=',
-          orderItems: '=',
-          itemsdetail: '='
-      },
+      scope: {},
       bindToController: {},
       controller: myOrdersController,
       controllerAs: 'myOrders',
@@ -24,27 +20,27 @@
   function myOrdersController($scope,MockedData,$state) {
       var vm = this;
       
-      var order = []
+      var orders = []
       MockedData.getOrders().then(function (response) {
-          vm.orders = response;
+          vm._orders = response;
           
-          angular.forEach(vm.orders, function(_order) {
-            if(_order.id == 'order1' || _order.id == 'order2') {
-                order.push(_order);
+          angular.forEach(vm._orders, function(order) {
+            if(order.id == 'order1' || order.id == 'order2') {
+                orders.push(order);
             }
           });
-          vm.order = order;
+          vm.orders = orders;
       });
       
       vm.orderItems = []
       MockedData.getOrderItems().then(function (response) {
           vm.orderItems = response;
           
-          for(var i = 0; i < vm.order.length; ++i) {
-              order[i].items = []
+          for(var i = 0; i < vm.orders.length; ++i) {
+              orders[i].items = []
               angular.forEach(vm.orderItems, function(_orderitems) {     
-                  if(_orderitems.orderId == vm.order[i].id) {
-                      vm.order[i].items.push(_orderitems.itemId);           
+                  if(_orderitems.orderId == vm.orders[i].id) {
+                      vm.orders[i].items.push(_orderitems.itemId);           
                   }
               });
           }
@@ -56,13 +52,13 @@
           vm.itemsdetail = response;
           
           // Recorremos los orders.
-          for(var i = 0; i < vm.order.length; ++i) {
+          for(var i = 0; i < vm.orders.length; ++i) {
               //Recorremos los items de los orders.
-              for(var j = 0; j < vm.order[i].items.length; ++j) {
+              for(var j = 0; j < vm.orders[i].items.length; ++j) {
                   angular.forEach(vm.itemsdetail, function(_allitems) {
                       // Añadimos a ese item los detalles.
-                      if(vm.order[i].items[j] == _allitems.id) {
-                          vm.order[i].items[j] = _allitems;
+                      if(vm.orders[i].items[j] == _allitems.id) {
+                          vm.orders[i].items[j] = _allitems;
                       }
                   });   
               }
@@ -70,9 +66,5 @@
           //console.log(vm.order);
       }); 
       
-      $scope.order = vm.order || [];
-      $scope.orderItems = vm.orderItems || [];
-      $scope.itemsdetail = vm.itemsdetail || [];
-
   }
 })();

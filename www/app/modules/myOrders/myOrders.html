@@ -1,24 +1,32 @@
 <div>
-    <div class="card" ng-repeat="_order in myOrders.order track by _order.id">
-        <div class="item item-divider" > Date: {{_order.date}}</div>
+    <div class="card" ng-repeat="_orders in myOrders.orders track by _orders.id">
+        <div class="item item-divider" > Date: {{_orders.date}}</div>
         
         <div class="item item-text-wrap">
-            <div class="list" ng-repeat="itemdetail in _order.items">
+            <div class="list" ng-repeat="itemdetail in _orders.items">
                 <a class="item item-thumbnail-left">
                     <img ng-src="{{itemdetail.picto}}" ui-sref="app.itemDetail({itemId: itemdetail.id})" class="iconImage"/>
             
                     <h2 class="blue-positive">{{itemdetail.name}}</h2>
                     <p>${{itemdetail.price}}</p>
+                    <a class="item item-icon-left"  ui-sref="app.myOpinion({item:itemdetail.id})">
+                        <i class="icon ion-chatbubble-working"></i>
+                        Write a Review
+
+                    </a>
+
                 </a>
             </div>
         </div>
         <div class="list">
+<!--
             <a class="item item-icon-left" href="#">
                 <i class="icon ion-chatbubble-working"></i>
                 Write a Review
 
             </a>
-            <a class="item item-icon-left" ui-sref="app.OrderDetail({orderId:_order.id})">
+-->
+            <a class="item item-icon-left" ui-sref="app.OrderDetail({orderId:_orders.id})">
                 <i class="icon ion-card"></i>
                 See Details
             </a>

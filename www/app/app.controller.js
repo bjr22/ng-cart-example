@@ -12,7 +12,7 @@
         $state.go('app.home');
       };
       $scope.showSubheader = function() {
-        return !($state.is('app.login') || $state.is('app.myOrders') || $state.is('app.myProfile'));
+        return ($state.is('app.home'));
       };
       $scope.showCartButton = function () {
         return (!($state.is('app.cartResume') || $state.is('app.login')) && ngCart.getTotalItems() > 0);

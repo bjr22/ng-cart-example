@@ -27,7 +27,7 @@
     
     $scope.readOnly = true; //readOnly rating directive
     $scope.rating = {
-      rate: vm.item.averageRate,
+      //rate: vm.item.averageRate,
       max: 5      
     };
     
