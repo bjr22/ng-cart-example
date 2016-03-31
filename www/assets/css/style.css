@@ -64,6 +64,11 @@ p {
     border-radius: 30px;
   }
 
+    .iconImage2 {
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+
   /* STRIPED TABLE */
   .evenRow {
     background-color:#E6E6FA;

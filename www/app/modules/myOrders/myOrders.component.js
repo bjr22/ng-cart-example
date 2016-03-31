@@ -20,6 +20,10 @@
   function myOrdersController($scope,MockedData,$state) {
       var vm = this;
       
+      vm.clickOnItem = function (id) {
+          $state.go('app.itemDetail', {itemId: id});
+      }
+      
       var orders = []
       MockedData.getOrders().then(function (response) {
           vm._orders = response;
@@ -63,7 +67,6 @@
                   });   
               }
           }
-          //console.log(vm.order);
       }); 
       
   }

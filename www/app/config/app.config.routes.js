@@ -89,8 +89,6 @@
                 }
               });
               $scope.opinions = _opinions;
-                
-                console.log($scope.item);
             }], 
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="Item details">' +
@@ -195,13 +193,26 @@
     /* MY OPINION */
     .state('app.myOpinion', {
         url: '/my-opinion/:item',
-        resolve: {},
+        resolve: {
+            allitems: ['MockedData', function (MockedData) {
+                return MockedData.getItems();
+            }],
+        },
         views: {
           'content@app': {
+              controller: ['$scope', '$stateParams', 'allitems', function ($scope, $stateParams, allitems) {
+
+                var item = null;  
+                allitems.forEach(function (_item) {
+                    if(_item.id === $stateParams.item) {
+                        $scope.item = _item;
+                    } 
+                });
+            }], 
             template:
               '<ion-view ng-cloak can-swipe-back="false" view-title="My Opinion">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<my-opinion></my-opinion>' +
+                  '<my-opinion item="item"></my-opinion>' +
                 '</ion-content>' + 
               '</ion-view>'
           }

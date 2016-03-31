@@ -1,3 +1,23 @@
-<div>
+<div >
+  
+    <img class="responsiveItemImg iconImage2" ng-src="{{item.picto}}"/>
+  
+    <h3>{{item.name}}</h3>
+  
+    <p>Section: {{item.section}}</p>
 
+    <p>Category: {{item.category}}</p>
+  
+    <p class="red">{{item.price | currency: "€"}}</p>
+  
+    <h3>Opinion:</h3>
+    
+    <ion-item>
+      <textarea placeholder="Please, write a Review" rows="6" cols="40" ng-model="myOpinion.opinion"></textarea>
+    </ion-item>
+    
+    <div class="row unlimited-items responsive-md">
+        <button class="button button-block button-positive" ng-click="myOpinion.showAlert()">Send Opinion</button>
+	</div>
+	
 </div>

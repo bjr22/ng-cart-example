@@ -8,7 +8,9 @@
   function myOpinion() {
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+          item: '='
+      },
       bindToController: {},
       controller: myOpinionController,
       controllerAs: 'myOpinion',
@@ -16,8 +18,18 @@
     };
   }
   
-  myOpinionController.$inject = ['$scope','MockedData','$state'];
-  function myOpinionController($scope,MockedData,$state) {
-
-  }
+  myOpinionController.$inject = ['$scope','MockedData','$state','$ionicPopup'];
+  function myOpinionController($scope,MockedData,$state,$ionicPopup) {
+      var vm = this;
+      vm.item = $scope.item;
+      vm.opinion = null;
+      
+      vm.showAlert = function() {
+          var alertPopup = $ionicPopup.alert({
+            title: 'Opinión enviada correctamente',
+            template:   
+              'Opinión: ' + vm.opinion
+          });
+        };
+      }
 })();
