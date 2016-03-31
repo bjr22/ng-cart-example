@@ -126,13 +126,44 @@
     
     .state('app.OrderDetail', {
         url: '/myOrders/:orderId',
-        resolve: {},
+        resolve: {
+            allitems: ['MockedData', function (MockedData) {
+                return MockedData.getItems();
+            }],
+            orderItems:['MockedData', function (MockedData) {
+                return MockedData.getOrderItems();
+            }]
+        },
         views: {
           'content@app': {
+            controller: ['$scope', '$stateParams', 'orderItems','allitems', function ($scope, $stateParams, orderItems,allitems) {
+
+                var items = []
+                var total = 0;
+                
+                orderItems.forEach(function (_order) {
+                    console.log();
+                    if (_order.orderId === $stateParams.orderId) {
+                        items.push(_order.itemId);
+                    }
+                });
+                
+                for (var i = 0; i < items.length; ++i) {
+                    allitems.forEach(function (_item) {
+                       if(_item.id === items[i]) {
+                           items[i] = _item;
+                           total += _item.price;
+                       } 
+                    });
+                } 
+                
+                $scope.items = items;
+                $scope.total = total;
+            }], 
             template: 
               '<ion-view ng-cloak can-swipe-back="false" view-title="My Orders">' +
                 '<ion-content has-bouncing="false"  >' +
-                  '<my-orders-detail></my-orders-detail>' +
+                  '<my-orders-detail items="items" total="total"></my-orders-detail>' +
                 '</ion-content>' + 
               '</ion-view>'
           }
@@ -153,6 +184,35 @@
               '<ion-view ng-cloak can-swipe-back="false" view-title="My Profile">' +
                 '<ion-content has-bouncing="false"  >' +
                   '<my-profile></my-profile>' +
+                '</ion-content>' + 
+              '</ion-view>'
+          }
+        }
+      })
+
+    /* MY OPINION */
+    .state('app.myOpinion', {
+        url: '/my-opinion/:item',
+        resolve: {
+            allitems: ['MockedData', function (MockedData) {
+                return MockedData.getItems();
+            }],
+        },
+        views: {
+          'content@app': {
+              controller: ['$scope', '$stateParams', 'allitems', function ($scope, $stateParams, allitems) {
+
+                var item = null;  
+                allitems.forEach(function (_item) {
+                    if(_item.id === $stateParams.item) {
+                        $scope.item = _item;
+                    } 
+                });
+            }], 
+            template:
+              '<ion-view ng-cloak can-swipe-back="false" view-title="My Opinion">' +
+                '<ion-content has-bouncing="false"  >' +
+                  '<my-opinion item="item"></my-opinion>' +
                 '</ion-content>' + 
               '</ion-view>'
           }
