@@ -42,7 +42,7 @@
           'content@app': {
             template:
               '<ion-view ng-cloak can-swipe-back="false" view-title="Cart Summary">' +
-                '<ion-content class="has-subheader" has-bouncing="false"  >' +
+                '<ion-content has-bouncing="false"  >' +
                   '<cart-summary></cart-summary>' +
                 '</ion-content>' + 
               '</ion-view>'

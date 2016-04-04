@@ -4,8 +4,8 @@
         
         <div class="item item-text-wrap">
             <div class="list" ng-repeat="itemdetail in _orders.items">
-                <a class="item item-thumbnail-left">
-                    <img ng-src="{{itemdetail.picto}}" ui-sref="app.itemDetail({itemId: itemdetail.id})" ng-click="myOrders.clickOnItem(itemdetail.id)" class="iconImage"/>
+                <a class="item item-thumbnail-left" ui-sref="app.itemDetail({itemId: itemdetail.id})" ng-click="myOrders.clickOnItem(itemdetail.id)">
+                    <img ng-src="{{itemdetail.picto}}"  class="iconImage"/>
             
                     <h2 class="blue-positive">{{itemdetail.name}}</h2>
                     <p>${{itemdetail.price}}</p>

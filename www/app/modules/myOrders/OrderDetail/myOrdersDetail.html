@@ -22,7 +22,7 @@
     <h4>Products</h4>
   
     <div ng-repeat="item in myOrdersDetail.items track by item.id">
-        <a class="item item-thumbnail-left">
+        <a class="item item-thumbnail-left" ui-sref="app.itemDetail({itemId: item.id})" ng-click="myOrdersDetail.clickOnItem(item.id)">
             <img ng-src="{{item.picto}}" ui-sref="app.itemDetail({itemId: item.id})" class="iconImage"/>
             
             <h2 class="blue-positive">{{item.name}}</h2>
